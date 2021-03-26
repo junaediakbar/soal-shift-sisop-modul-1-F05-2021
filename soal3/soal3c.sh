@@ -23,8 +23,7 @@ b=9
 	fi
   done
 #HAPUS YANG DUPLICATE
-grep "Location" Foto.log > location.log
-readarray myarray < location.log
+myarray=($(awk '/Location/ {print $2}' $PWD/Foto.log))
 
 for ((i=0 ;i<23;i++))
 do
@@ -60,8 +59,7 @@ b=9
 	fi
   done
 #HAPUS YANG DUPLICATE
-grep "Location" Foto.log > location.log
-readarray myarray < location.log
+myarray=($(awk '/Location/ {print $2}' $PWD/Foto.log))
 
 for ((i=0 ;i<23;i++))
 do
