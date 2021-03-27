@@ -22,21 +22,21 @@ Bisa menampilkan semua pesan error yang muncul yang muncul beserta jumlah kemunc
 
 Untuk menjawab sub-soal, dimasukkan perintah :<br>
 err=`grep "ERROR" "syslog.log" | cut -d' ' -f7- | cut -d'(' -f1 | sort | uniq -c`<br>
-Pada baris diatas, pertama - tama dijalankan perintah `grep "ERROR" "syslog.log"`. Perintah ini berguna untuk mengambil data suatu baris yang memiliki
+Pada baris diatas, pertama - tama dijalankan perintah `grep "ERROR" "syslog.log"`. Perintah ini berfungsi untuk mengambil data dari suatu baris yang memiliki
 string "Error" didalamnya dari file syslog.log.<br>
-Setelah itu, dilakukan **pipe (|)** dari output perintah pertama menuju perintah `cut -d' ' -f7-`.<br><br>
+Setelah itu, dilakukan **pipe (|)** dari output perintah pertama menuju ke perintah `cut -d' ' -f7-`.<br><br>
 
-Pada perintah `cut -d' ' -f7-`, hasil string yang didapatkan pada perintah pertama akan dipotong mengacu pada 
+Pada perintah `cut -d' ' -f7-`, hasil string yang didapatkan pada perintah pertama akan dipotong dengan mengacu pada 
 karakter spasi (" "). Kemudian dari hasil potongan tersebut, diambil ***field ke 7 hingga terakhir*** sehingga 
 diperoleh data **tipe error** dan **username** baris.<br>
-Setelah itu, dilakukan **pipe (|)** dari output perintah kedua ini menuju perintah `cut -d'(' -f1`.<br><br>
+Setelah itu, dilakukan **pipe (|)** dari output perintah kedua ini menuju ke perintah `cut -d'(' -f1`.<br><br>
 
 Pada perintah `cut -d'(' -f1`, hasil string dari perintah kedua akan dipotong kembali dengan mengacu pada karakter
 buka kurung ("("). Kemudian dari hasil pemotongan tersebut, diambil ***field pertama*** hasil pemotongan sehingga
 data string yang tersisa hanyalah **tipe error** pada baris tersebut saja.<br>
-Setelah itu, dilakukan **pipe (|)** sekali lagi dari output perintah ketiga menuju perintah `sort | uniq -c`.<br><br>
+Setelah itu, dilakukan **pipe (|)** sekali lagi dari output perintah ketiga menuju ke perintah `sort | uniq -c`.<br><br>
 
-Pada perintah `sort | uniq -c`, hasil string perintah ketiga kemudian akan di sorting sesuai namanya dan dilakukan pipe-ing terakhir
+Pada perintah `sort | uniq -c`, hasil string perintah ketiga kemudian akan di sorting sesuai dengan namanya dan dilakukan pipe-ing terakhir
 menuju perintah uniq -c untuk menghitung jumlah kemunculan unique string yang telah diurutkan tersebut.
 
 ## Soal 1C
@@ -44,20 +44,20 @@ Bisa menampilkan jumlah kemunculan log ERROR dan INFO untuk setiap user-nya.<br>
 
 Untuk menjawab sub-soal, dimasukkan perintah :
 counterr=`grep "ERROR" "syslog.log"| cut -d'(' -f2 | cut -d')' -f1 | sort | uniq -c`
-Pada baris diatas, pertama - tama dijalankan perintah `grep "ERROR" "syslog.log"`. Perintah ini berguna untuk mengambil data suatu baris yang memiliki
+Pada baris diatas, pertama - tama dijalankan perintah `grep "ERROR" "syslog.log"`. Perintah ini berfungsi untuk mengambil data suatu baris yang memiliki
 string "Error" didalamnya dari file syslog.log.<br>
 Setelah itu, dilakukan **pipe (|)** dari output perintah pertama menuju perintah `cut -d'(' -f2`.<br><br>
 
-Pada perintah `cut -d'(' -f2`, hasil string yang didapatkan pada perintah pertama akan dipotong mengacu pada 
+Pada perintah `cut -d'(' -f2`, hasil string yang didapatkan pada perintah pertama akan dipotong dengan mengacu pada 
 karakter ("("). Kemudian dari hasil potongan tersebut, diambil ***field ke 2 hingga pertama*** sehingga 
-diperoleh data **username** baris. Namun masih ada karakter (")"), setelah itu dilakukan **pipe (|)** dari output perintah kedua ini menuju perintah `cut -d')' -f1`.<br><br>
+diperoleh data **username** baris. Namun masih ada karakter (")"), setelah itu dilakukan **pipe (|)** dari output perintah kedua ini menuju ke perintah `cut -d')' -f1`.<br><br>
 
 Pada perintah `cut -d')' -f1`, hasil string dari perintah kedua akan dipotong kembali dengan mengacu pada karakter
 tutup kurung (")"). Kemudian dari hasil pemotongan tersebut, diambil ***field pertama*** hasil pemotongan sehingga
 data string yang tersisa hanyalah **username** pada baris tersebut saja.<br>
-Setelah itu, dilakukan **pipe (|)** sekali lagi dari output perintah ketiga menuju perintah `sort | uniq -c`.<br><br>
+Setelah itu, dilakukan **pipe (|)** sekali lagi dari output perintah ketiga menuju ke perintah `sort | uniq -c`.<br><br>
 
-Pada perintah `sort | uniq -c`, hasil string perintah ketiga kemudian akan di sorting sesuai namanya dan dilakukan pipe-ing terakhir
+Pada perintah `sort | uniq -c`, hasil string perintah ketiga kemudian akan di sorting sesuai dengan namanya dan dilakukan pipe-ing terakhir
 menuju perintah uniq -c untuk menghitung jumlah kemunculan unique string yang telah diurutkan tersebut.<br><br>
 
 Untuk menampilkan jumlah kemunculan log INFO, kita bisa menggunakan perintah serupa dengan perintah untuk menampilkan jumlah log ERROR :
