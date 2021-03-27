@@ -57,6 +57,7 @@ LC_ALL=C awk -F '\t' '
 		for(types in arr) {  
 			if (isFirst == 1){
 				min = arr[types]
+				minTypes = types
 				isFirst = 0
 				continue
 			}
@@ -82,6 +83,7 @@ LC_ALL=C awk -F '\t' '
 		for(region in arr){
 			if (isFirst == 1){
 				min = arr[region]
+				minRegion = region
 				isFirst = 0
 				continue
 			}
