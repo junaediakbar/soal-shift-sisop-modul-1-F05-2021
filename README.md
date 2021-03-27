@@ -20,8 +20,8 @@ dari setiap baris tersebut.<br><br>
 ## Soal 1B
 Bisa menampilkan semua pesan error yang muncul yang muncul beserta jumlah kemunculannya.<br><br>
 
-Untuk menjawab sub-soal, dimasukkan perintah :
-err=`grep "ERROR" "syslog.log" | cut -d' ' -f7- | cut -d'(' -f1 | sort | uniq -c`
+Untuk menjawab sub-soal, dimasukkan perintah :<br>
+err=`grep "ERROR" "syslog.log" | cut -d' ' -f7- | cut -d'(' -f1 | sort | uniq -c`<br>
 Pada baris diatas, pertama - tama dijalankan perintah `grep "ERROR" "syslog.log"`. Perintah ini berguna untuk mengambil data suatu baris yang memiliki
 string "Error" didalamnya dari file syslog.log.<br>
 Setelah itu, dilakukan **pipe (|)** dari output perintah pertama menuju perintah `cut -d' ' -f7-`.<br><br>
