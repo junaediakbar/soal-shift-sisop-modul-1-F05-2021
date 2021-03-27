@@ -267,7 +267,16 @@ mv ./Foto.log "./$now"
 
 ## soal 3c
 
-Untuk soal ini kita diminta untuk mendownload gambar kucing dan kelinci secara bergantian tiap hari kemudian di simpan dalam folder Kucing_%mm%dd%Y untuk gambar kucing dan Kelinci_%mm%dd%Y untuk gambar kelinci. maka diawal script perlu diperiksa nama folder yang telah didownload (pada hari sebelumnya), jika filenya adalah kucing maka akan di download gambar kelinci begitu juga sebaliknya
+Untuk soal ini kita diminta untuk mendownload gambar kucing dan kelinci secara bergantian tiap hari kemudian di simpan dalam folder Kucing_%mm%dd%Y untuk gambar kucing dan Kelinci_%mm%dd%Y untuk gambar kelinci. maka diawal script perlu diperiksa nama folder yang telah didownload (pada hari sebelumnya), jika filenya adalah kucing maka akan di download gambar kelinci begitu juga sebaliknya. Karena diminta untuk mendownload gambar kelinci kita bisa membuat command yang mirip seperti __soal3a.sh__ hanya mengganti link setelah ```wget```.
+``` wget -a $PWD/Foto.log -O $PWD/"Koleksi_0$i" https://loremflickr.com/320/240/bunny```
+
+Karena kita diminta memindahkan file ke folder yang bernama sesuai dengan tanggal di download
+maka dapat menggunakan command berikut
+```
+mv ./Koleksi_* "./Kucing_$now"
+mv ./Foto.log "./Kucing_$now"
+```
+Dan berikut adalah keseluruhan dari __soal3c.sh__
 ```
 #!/bin/bash
 
