@@ -64,7 +64,7 @@ printf "Transaksi terakhir dengan profit percentage terbesar yaitu %d dengan per
 Tujuannya adalah untuk menuliskan output yang didapatkan sesuai dengan format tersebut. Sedangkan untuk `Laporan-TokoShiSop.tsv > hasil.txt`, *Laporan-TokoShiSop.tsv* adalah
 source file data yang digunakan pada operasi awk, dan `> hasil.txt` digunakan untuk mengirimkan hasil output script kedalam file **hasil.txt**<br>
 
-##Soal 2b
+## Soal 2b
 Carilah nama customer pada transaksi tahun **2017** dan berdomisili di **Albuquerque**<br><br>
 Pada bagian *action* awk, terdapat command :
 ```
@@ -98,7 +98,7 @@ yang diminta. Sedangkan untuk `Laporan-TokoShiSop.tsv >> hasil.txt`, *Laporan-To
 source file data yang digunakan pada operasi awk, dan `>> hasil.txt` digunakan untuk mengirimkan hasil output script kedalam 
 file **hasil.txt** tanpa menghapus konten yang sudah ada sebelumnya di **hasil.txt**.<br><br>
 
-##Soal 2C
+## Soal 2C
 Carilah data **segment customer** yang memiliki **jumlah transaksi yang paling sedikit**.<br><br>
 Pada bagian *action* awk, terdapat command :
 ```
@@ -141,7 +141,7 @@ yang diminta. Sedangkan untuk `Laporan-TokoShiSop.tsv >> hasil.txt`, *Laporan-To
 source file data yang digunakan pada operasi awk, dan `>> hasil.txt` digunakan untuk mengirimkan hasil output script kedalam 
 file **hasil.txt** tanpa menghapus konten yang sudah ada sebelumnya di **hasil.txt**.<br><br> 
 
-##Soal 2d
+## Soal 2d
 Carilah **region yang memiliki total profit yang paling sedikit** beserta dengan **total profitnya**.<br><br>
 Pada bagian *action* awk, terdapat command :
 ```
