@@ -17,6 +17,28 @@ Perintah `cut -f6- -d' '` digunakan untuk memotong output yang sudah didapatkan 
 Kemudian, dari hasil potongan tersebut, diambil ***field ke 6 hingga terakhir*** untuk mendapatkan nilai **jenis log**, **pesan log**, dan **username**
 dari setiap baris tersebut.<br><br> 
 
+## Soal 1B
+Bisa menampilkan semua pesan error yang muncul yang muncul beserta jumlah kemunculannya.<br><br>
+
+Untuk menjawab sub-soal, dimasukkan perintah :
+err=`grep "ERROR" "syslog.log" | cut -d' ' -f7- | cut -d'(' -f1 | sort | uniq -c`
+Pada baris diatas, pertama - tama dijalankan perintah `grep "ERROR" "syslog.log"`. Perintah ini berguna untuk mengambil data suatu baris yang memiliki
+string "Error" didalamnya dari file syslog.log.<br>
+Setelah itu, dilakukan **pipe (|)** dari output perintah pertama menuju perintah `cut -d' ' -f7-`.<br><br>
+
+Pada perintah `cut -d' ' -f7-`, hasil string yang didapatkan pada perintah pertama akan dipotong mengacu pada 
+karakter spasi (" "). Kemudian dari hasil potongan tersebut, diambil ***field ke 7 hingga terakhir*** sehingga 
+diperoleh data **tipe error** dan **username** baris.<br>
+Setelah itu, dilakukan **pipe (|)** dari output perintah kedua ini menuju perintah `cut -d'(' -f1`.<br><br>
+
+Pada perintah `cut -d'(' -f1`, hasil string dari perintah kedua akan dipotong kembali dengan mengacu pada karakter
+buka kurung ("("). Kemudian dari hasil pemotongan tersebut, diambil ***field pertama*** hasil pemotongan sehingga
+data string yang tersisa hanyalah **tipe error** pada baris tersebut saja.<br>
+Setelah itu, dilakukan **pipe (|)** sekali lagi dari output perintah ketiga menuju perintah `sort | uniq -c`.<br><br>
+
+Pada perintah `sort | uniq -c`, hasil string perintah ketiga kemudian akan di sorting sesuai namanya dan dilakukan pipe-ing terakhir
+menuju perintah uniq -c untuk menghitung jumlah kemunculan unique string yang telah diurutkan tersebut.
+
 # Soal 2
 Soal ini menggunakan data yang berasal dari *laporan-TokoShiSop.tsv* yang telah disediakan.<br>
 Karena file berformat *tsv*, maka pada setiap sub-soal, AWK diinisiasi dengan menggunakan command :
