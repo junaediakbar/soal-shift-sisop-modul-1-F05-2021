@@ -38,6 +38,11 @@ Setelah itu, dilakukan **pipe (|)** sekali lagi dari output perintah ketiga menu
 
 Pada perintah `sort | uniq -c`, hasil string perintah ketiga kemudian akan di sorting sesuai namanya dan dilakukan pipe-ing terakhir
 menuju perintah uniq -c untuk menghitung jumlah kemunculan unique string yang telah diurutkan tersebut.
+## Soal 1D
+Belum bisa tranfer data ke csv. 
+
+## Soal 1E
+Belum bisa tranfer data dari ke csv. 
 
 # Soal 2
 Soal ini menggunakan data yang berasal dari *laporan-TokoShiSop.tsv* yang telah disediakan.<br>
