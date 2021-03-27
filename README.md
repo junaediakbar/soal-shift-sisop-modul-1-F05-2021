@@ -1,6 +1,8 @@
 # soal-shift-sisop-modul-1-F05-2021
 
 # Soal 1
+
+
 # Soal 2
 Soal ini menggunakan data yang berasal dari *laporan-TokoShiSop.tsv* yang telah disediakan.<br>
 Karena file berformat *tsv*, maka pada setiap sub-soal, AWK diinisiasi dengan menggunakan command :
@@ -62,7 +64,7 @@ printf "Transaksi terakhir dengan profit percentage terbesar yaitu %d dengan per
 Tujuannya adalah untuk menuliskan output yang didapatkan sesuai dengan format tersebut. Sedangkan untuk `Laporan-TokoShiSop.tsv > hasil.txt`, *Laporan-TokoShiSop.tsv* adalah
 source file data yang digunakan pada operasi awk, dan `> hasil.txt` digunakan untuk mengirimkan hasil output script kedalam file **hasil.txt**<br>
 
-## Soal 2b
+##Soal 2b
 Carilah nama customer pada transaksi tahun **2017** dan berdomisili di **Albuquerque**<br><br>
 Pada bagian *action* awk, terdapat command :
 ```
@@ -96,7 +98,7 @@ yang diminta. Sedangkan untuk `Laporan-TokoShiSop.tsv >> hasil.txt`, *Laporan-To
 source file data yang digunakan pada operasi awk, dan `>> hasil.txt` digunakan untuk mengirimkan hasil output script kedalam 
 file **hasil.txt** tanpa menghapus konten yang sudah ada sebelumnya di **hasil.txt**.<br><br>
 
-## Soal 2C
+##Soal 2C
 Carilah data **segment customer** yang memiliki **jumlah transaksi yang paling sedikit**.<br><br>
 Pada bagian *action* awk, terdapat command :
 ```
@@ -133,13 +135,13 @@ Varibel `isFirst` digunakan untuk membantu mengecek apakah data merupakan data p
 dilakukan pengecekan. Jika data adalah data pertama, maka dilakukan inisiasi nilai minimal secara keseluruhan dengan menggunakan nilai data ke-1 tersebut, yang nantinya
 akan digunakan untuk dibandingkan dengan data lainnya. Jika data bukan data pertama pada array, maka data tersebut akan dibandingkan dengan
 nilai minimal yang telah ditetapkan sebelumnya. Jika data ke-i ternyata lebih kecil, maka nilai minimal dari array akan diubah dengan 
-menggunakan data ke-i.<br>
+menggunakan data ke-i.<br><br>
 Setelah selesai dilakukan pengecekkan seluruh elemen yang ada pada array, tuliskan output yang didapatkan sesuai dengan format
 yang diminta. Sedangkan untuk `Laporan-TokoShiSop.tsv >> hasil.txt`, *Laporan-TokoShiSop.tsv* adalah
 source file data yang digunakan pada operasi awk, dan `>> hasil.txt` digunakan untuk mengirimkan hasil output script kedalam 
 file **hasil.txt** tanpa menghapus konten yang sudah ada sebelumnya di **hasil.txt**.<br><br> 
 
-## Soal 2d
+##Soal 2d
 Carilah **region yang memiliki total profit yang paling sedikit** beserta dengan **total profitnya**.<br><br>
 Pada bagian *action* awk, terdapat command :
 ```
@@ -177,11 +179,21 @@ Varibel `isFirst` digunakan untuk membantu mengecek apakah data merupakan data p
 dilakukan pengecekan. Jika data adalah data pertama, maka dilakukan inisiasi nilai minimal secara keseluruhan dengan menggunakan nilai data ke-1 tersebut, yang nantinya
 akan digunakan untuk dibandingkan dengan data lainnya. Jika data bukan data pertama pada array, maka data tersebut akan dibandingkan dengan
 nilai minimal yang telah ditetapkan sebelumnya. Jika data ke-i ternyata lebih kecil, maka nilai minimal dari array akan diubah dengan 
-menggunakan data ke-i.<br>
+menggunakan data ke-i.<br><br>
 Setelah selesai dilakukan pengecekkan seluruh elemen yang ada pada array, tuliskan output yang didapatkan sesuai dengan format
 yang diminta. Sedangkan untuk `Laporan-TokoShiSop.tsv >> hasil.txt`, *Laporan-TokoShiSop.tsv* adalah
 source file data yang digunakan pada operasi awk, dan `>> hasil.txt` digunakan untuk mengirimkan hasil output script kedalam 
 file **hasil.txt** tanpa menghapus konten yang sudah ada sebelumnya di **hasil.txt**.<br><br> 
+
+## Soal 2e
+Membuat file dengan judul "**hasil.txt**" yang berisi kumpulan hasil jawaban dari script sebelumnya.<br><br>
+
+Proses ini telah dilakukan setiap sebuah script solusi dari sub-soal dijalankan. Sebagai catatan, terdapat dua operator ***redirection*** yang digunakan.
+Yang pertama adalah operator `>` untuk mengoverwrite seluruh konten yang sebelumnya ada di file tujuan dengan output yang didapatkan dari script. Operator ini digunakan pada sub-soal 2a. <br>
+Sedangkan operator redirection yang kedua adalah `>>`, digunakan untuk menambahkan hasil output script yang didapatkan ke halaman akhir file tujuan tanpa melakukan overwriting. Operator ini
+digunakan pada soal 2b,2c,dan 2d.<br><br>
+
+
 # Soal 3
 ## soal 3a
 Untuk mendowload file dari ```https://loremflickr.com/320/240/kitten``` kita dapat menggunakan perintah ```wget -a $PWD/Foto.log -O $PWD/"Koleksi_0$i"```serta akan menyimpan log ke dalam file __Foto.log__
