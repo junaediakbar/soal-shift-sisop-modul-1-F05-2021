@@ -38,6 +38,31 @@ Setelah itu, dilakukan **pipe (|)** sekali lagi dari output perintah ketiga menu
 
 Pada perintah `sort | uniq -c`, hasil string perintah ketiga kemudian akan di sorting sesuai namanya dan dilakukan pipe-ing terakhir
 menuju perintah uniq -c untuk menghitung jumlah kemunculan unique string yang telah diurutkan tersebut.
+
+## Soal 1C
+Bisa menampilkan jumlah kemunculan log ERROR dan INFO untuk setiap user-nya.<br><br>
+
+Untuk menjawab sub-soal, dimasukkan perintah :
+counterr=`grep "ERROR" "syslog.log"| cut -d'(' -f2 | cut -d')' -f1 | sort | uniq -c`
+Pada baris diatas, pertama - tama dijalankan perintah `grep "ERROR" "syslog.log"`. Perintah ini berguna untuk mengambil data suatu baris yang memiliki
+string "Error" didalamnya dari file syslog.log.<br>
+Setelah itu, dilakukan **pipe (|)** dari output perintah pertama menuju perintah `cut -d'(' -f2`.<br><br>
+
+Pada perintah `cut -d'(' -f2`, hasil string yang didapatkan pada perintah pertama akan dipotong mengacu pada 
+karakter ("("). Kemudian dari hasil potongan tersebut, diambil ***field ke 2 hingga pertama*** sehingga 
+diperoleh data **username** baris. Namun masih ada karakter (")"), setelah itu dilakukan **pipe (|)** dari output perintah kedua ini menuju perintah `cut -d')' -f1`.<br><br>
+
+Pada perintah `cut -d')' -f1`, hasil string dari perintah kedua akan dipotong kembali dengan mengacu pada karakter
+tutup kurung (")"). Kemudian dari hasil pemotongan tersebut, diambil ***field pertama*** hasil pemotongan sehingga
+data string yang tersisa hanyalah **username** pada baris tersebut saja.<br>
+Setelah itu, dilakukan **pipe (|)** sekali lagi dari output perintah ketiga menuju perintah `sort | uniq -c`.<br><br>
+
+Pada perintah `sort | uniq -c`, hasil string perintah ketiga kemudian akan di sorting sesuai namanya dan dilakukan pipe-ing terakhir
+menuju perintah uniq -c untuk menghitung jumlah kemunculan unique string yang telah diurutkan tersebut.<br><br>
+
+Untuk menampilkan jumlah kemunculan log INFO, kita bisa menggunakan perintah serupa dengan perintah untuk menampilkan jumlah log ERROR :
+countin=`grep "INFO" "syslog.log"| cut -d'(' -f2 | cut -d')' -f1 | sort | uniq -c`
+
 ## Soal 1D
 Belum bisa tranfer data ke csv. 
 
