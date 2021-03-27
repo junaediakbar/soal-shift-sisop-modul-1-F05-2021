@@ -10,7 +10,8 @@ LC_ALL=C awk -F '\t' '
 `LC_ALL=C` digunakan sebagai *pre-caution* agar awk dapat membaca angka desimal pada data dengan benar. Hal ini berkaitan dengan penggunaan tanda titik (.) atau tanda koma (,) sebagai representasi tanda desimal.<br>
 Sedangakan untuk `awk -F '\t'`, digunakan untuk menginisiasi awk sekaligus menetapkan nilai **tab (\t)** sebagai *field separator* (melihat file berformat *tsv*).<br><br>
 ## Soal 2a
-Carilah *Row ID* beserta dengan *Profit Percentage* terbesar pada data (jika hasil *profit percentage* terbesar lebih dari 1, ambil data yang memiliki **Row ID** yang paling besar).<br><br> Dimana **profit percentage** dapat dicari dengan cara :
+Carilah *Row ID* beserta dengan *Profit Percentage* terbesar pada data (jika hasil *profit percentage* terbesar lebih dari 1, ambil data yang memiliki **Row ID** yang paling besar).<br><br> 
+Dimana **profit percentage** dapat dicari dengan cara :
 ```
 Profit Percentage =  (Profit : (Sales - Profit) x 100
 ```
@@ -27,19 +28,21 @@ Command diatas digunakan untuk menginisiasi variabel tertentu yang akan digunaka
  
  Pada bagian *action* awk, terdapat command :
  ```
-if(NR != 1){
-	profitPercentage = ($21/($18-$21))
-	if(isFirst == 1){
-		maxPP = profitPercentage
-		maxRID = $1
-		isFirst = 0
-	}
-	else{
-		if(profitPercentage >= maxPP){
+ {
+	if(NR != 1){
+		profitPercentage = ($21/($18-$21))
+		if(isFirst == 1){
 			maxPP = profitPercentage
 			maxRID = $1
+			isFirst = 0
 		}
-	} 
+		else{
+			if(profitPercentage >= maxPP){
+				maxPP = profitPercentage
+				maxRID = $1
+			}
+		} 
+	}
 }			
 ```
 Maksud dari kumpulan command diatas adalah, jika `NR` atau Number of Row tidak sama dengan 1 (artinya bukan header), maka hitung nilai `profitPercentage`
@@ -52,8 +55,8 @@ untuk menentukan siapa yang memiliki `profiPercentage` yang paling besar.<br><br
 Pada bagian akhir script, terdapat command :
 ```
 END{
-	printf "Transaksi terakhir dengan profit percentage terbesar yaitu %d dengan persentase %.2f%%.\n\n", maxRID, maxPP*100
-	}
+printf "Transaksi terakhir dengan profit percentage terbesar yaitu %d dengan persentase %.2f%%.\n\n", maxRID, maxPP*100
+}
 ' Laporan-TokoShiSop.tsv > hasil.txt
 ```
 Tujuannya adalah untuk menuliskan output yang didapatkan sesuai dengan format tersebut. Sedangkan untuk `Laporan-TokoShiSop.tsv > hasil.txt`, *Laporan-TokoShiSop.tsv* adalah
@@ -79,19 +82,106 @@ menjadi sebuah *key* di array *names*<br><br>
 Kemudian pada bagian akhir  AWK, terdapat perintah :
 ``` 
 END{
-		printf "Daftar nama customer di Albuquerque pada tahun 2017 antara lain:\n"
+	printf "Daftar nama customer di Albuquerque pada tahun 2017 antara lain:\n"
 		for(name in names){
 			printf "%s\n", name
 		}
 	printf "\n"	
-	}
+}
 ' Laporan-TokoShiSop.tsv >> hasil.txt
 ```
 
 Di bagian `END` tersebut, perintah yang tertulis digunakan untuk menuliskan output yang didapatkan sesuai dengan format
-yang diminta. Sedangkan untuk `Laporan-TokoShiSop.tsv > hasil.txt`, *Laporan-TokoShiSop.tsv* adalah
+yang diminta. Sedangkan untuk `Laporan-TokoShiSop.tsv >> hasil.txt`, *Laporan-TokoShiSop.tsv* adalah
 source file data yang digunakan pada operasi awk, dan `>> hasil.txt` digunakan untuk mengirimkan hasil output script kedalam 
 file **hasil.txt** tanpa menghapus konten yang sudah ada sebelumnya di **hasil.txt**.<br><br>
+
+##Soal 2C
+Carilah data **segment customer** yang memiliki **jumlah transaksi yang paling sedikit**.<br><br>
+Pada bagian *action* awk, terdapat command :
+```
+{	
+	if(NR != 1){
+		arr[$8]++
+	}
+}
+```
+Pada bagian ini, operasi yang dilakukan adalah untuk mengumpulkan *jumlah segment customer* keseluruhan yang ada berdasarkan nama 
+segment customer-nya($8) sendiri - sendiri. Syarat yang dikenakan adalah, apabila baris tersebut bukanlah baris header dari File. <br><br>
+
+Pada bagian akhir script AWK, terdapat command :
+```
+END{
+	isFirst = 1;
+	for(types in arr) {  
+		if (isFirst == 1){
+			min = arr[types]
+			minTypes = types
+			isFirst = 0
+			continue
+		}
+		else if (arr[types] < min){
+			minTypes = types
+			min = arr[types]
+		}
+	}
+	printf "Tipe segmen customer yang penjualannya paling sedikit adalah %s dengan %d transaksi\n\n", minTypes, min		
+}
+' Laporan-TokoShiSop.tsv >> hasil.txt
+```
+Varibel `isFirst` digunakan untuk membantu mengecek apakah data merupakan data pertama.	Di dalam perulangan elemen array yang ada, pertama - tama
+dilakukan pengecekan. Jika data adalah data pertama, maka dilakukan inisiasi nilai minimal secara keseluruhan dengan menggunakan nilai data ke-1 tersebut, yang nantinya
+akan digunakan untuk dibandingkan dengan data lainnya. Jika data bukan data pertama pada array, maka data tersebut akan dibandingkan dengan
+nilai minimal yang telah ditetapkan sebelumnya. Jika data ke-i ternyata lebih kecil, maka nilai minimal dari array akan diubah dengan 
+menggunakan data ke-i.<br>
+Setelah selesai dilakukan pengecekkan seluruh elemen yang ada pada array, tuliskan output yang didapatkan sesuai dengan format
+yang diminta. Sedangkan untuk `Laporan-TokoShiSop.tsv >> hasil.txt`, *Laporan-TokoShiSop.tsv* adalah
+source file data yang digunakan pada operasi awk, dan `>> hasil.txt` digunakan untuk mengirimkan hasil output script kedalam 
+file **hasil.txt** tanpa menghapus konten yang sudah ada sebelumnya di **hasil.txt**.<br><br> 
+
+##Soal 2d
+Carilah **region yang memiliki total profit yang paling sedikit** beserta dengan **total profitnya**.<br><br>
+Pada bagian *action* awk, terdapat command :
+```
+{	
+	if(NR != 1){
+		arr[$13]+=$21
+	}
+}
+```
+Pada bagian ini, operasi yang dilakukan adalah untuk mengumpulkan **jumlah total profit dari masing - masing region** ke dalam sebuah array, dimana nama region ($13) 
+dijadikan sebagai *key* dari tiap element, sedangkan *value* untuk tiap element didapatkan dengan menambahkan profit ($21) dari masing - masing region tersebut ke dalam array. 
+Syarat yang dikenakan adalah, apabila baris tersebut bukanlah baris header dari File. <br><br>
+
+Pada bagian akhir script AWK, terdapat command :
+```
+END{
+	isFirst = 1
+	for(region in arr){
+		if (isFirst == 1){
+			min = arr[region]
+			minRegion = region
+			isFirst = 0
+			continue
+		}
+		else if (arr[region] < min){
+			minRegion = region
+			min = arr[region]
+		}
+	}
+	printf "Wilayah bagian (region) yang memiliki total keuntungan (profit) yang paling sedikit adalah %s dengan total keuntungan %.4f\n", minRegion, min		
+}
+' Laporan-TokoShiSop.tsv >> hasil.txt
+```
+Varibel `isFirst` digunakan untuk membantu mengecek apakah data merupakan data pertama.	Di dalam perulangan elemen array yang ada, pertama - tama
+dilakukan pengecekan. Jika data adalah data pertama, maka dilakukan inisiasi nilai minimal secara keseluruhan dengan menggunakan nilai data ke-1 tersebut, yang nantinya
+akan digunakan untuk dibandingkan dengan data lainnya. Jika data bukan data pertama pada array, maka data tersebut akan dibandingkan dengan
+nilai minimal yang telah ditetapkan sebelumnya. Jika data ke-i ternyata lebih kecil, maka nilai minimal dari array akan diubah dengan 
+menggunakan data ke-i.<br>
+Setelah selesai dilakukan pengecekkan seluruh elemen yang ada pada array, tuliskan output yang didapatkan sesuai dengan format
+yang diminta. Sedangkan untuk `Laporan-TokoShiSop.tsv >> hasil.txt`, *Laporan-TokoShiSop.tsv* adalah
+source file data yang digunakan pada operasi awk, dan `>> hasil.txt` digunakan untuk mengirimkan hasil output script kedalam 
+file **hasil.txt** tanpa menghapus konten yang sudah ada sebelumnya di **hasil.txt**.<br><br> 
 # Soal 3
 ## soal 3a
 Untuk mendowload file dari ```https://loremflickr.com/320/240/kitten``` kita dapat menggunakan perintah ```wget -a $PWD/Foto.log -O $PWD/"Koleksi_0$i"```serta akan menyimpan log ke dalam file __Foto.log__
