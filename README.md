@@ -1,7 +1,21 @@
 # soal-shift-sisop-modul-1-F05-2021
 
 # Soal 1
+## Soal 1A
+Mengumpulkan informasi dari log aplikasi yang terdapat pada file syslog.log. 
+Informasi yang diperlukan antara lain: jenis log (ERROR/INFO), pesan log, dan username pada setiap baris lognya.<br><br>
 
+Untuk menjawab sub-soal, dimasukkan perintah :
+```
+log=`cat syslog.log | cut -f6- -d' '`
+```
+
+Pada baris diatas, pertama - tama dijalankannya perintah `cat syslog.log`. Perintah ini berfungsi sebagai menampilkan data - data yang ada di file `sylog.log` tersebut.<br>
+Setelah itu, dilakukan **pipe(|)** dari output perintah yang pertama menuju ke perintah `cut -f6- -d' '`.<br><br>
+
+Perintah `cut -f6- -d' '` digunakan untuk memotong output yang sudah didapatkan dari perintah sebelumnya berdasarkan pada karakter spasi (" ").
+Kemudian, dari hasil potongan tersebut, diambil ***field ke 6 hingga terakhir*** untuk mendapatkan nilai **jenis log**, **pesan log**, dan **username**
+dari setiap baris tersebut.<br><br> 
 
 # Soal 2
 Soal ini menggunakan data yang berasal dari *laporan-TokoShiSop.tsv* yang telah disediakan.<br>
