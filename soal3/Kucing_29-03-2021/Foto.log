@@ -1,0 +1,360 @@
+--2021-03-30 18:28:59--  https://loremflickr.com/320/240/kitten
+Resolving loremflickr.com (loremflickr.com)... 104.21.47.37, 172.67.170.91, 2606:4700:3034::6815:2f25, ...
+Connecting to loremflickr.com (loremflickr.com)|104.21.47.37|:443... connected.
+HTTP request sent, awaiting response... 302 Found
+Location: /cache/resized/65535_50424112413_0ecffe4311_320_240_nofilter.jpg [following]
+--2021-03-30 18:29:04--  https://loremflickr.com/cache/resized/65535_50424112413_0ecffe4311_320_240_nofilter.jpg
+Reusing existing connection to loremflickr.com:443.
+HTTP request sent, awaiting response... 200 OK
+Length: 10773 (11K) [image/jpeg]
+Saving to: ‘/home/juned/soal-shift-sisop-modul-1-F05-2021/soal3/Koleksi_01’
+
+     0K ..........                                            100% 4,50K=2,3s
+
+2021-03-30 18:29:07 (4,50 KB/s) - ‘/home/juned/soal-shift-sisop-modul-1-F05-2021/soal3/Koleksi_01’ saved [10773/10773]
+
+--2021-03-30 18:29:07--  https://loremflickr.com/320/240/kitten
+Resolving loremflickr.com (loremflickr.com)... 172.67.170.91, 104.21.47.37, 2606:4700:3037::ac43:aa5b, ...
+Connecting to loremflickr.com (loremflickr.com)|172.67.170.91|:443... connected.
+HTTP request sent, awaiting response... 302 Found
+Location: /cache/resized/65535_51070124663_01afa21407_320_240_nofilter.jpg [following]
+--2021-03-30 18:29:12--  https://loremflickr.com/cache/resized/65535_51070124663_01afa21407_320_240_nofilter.jpg
+Reusing existing connection to loremflickr.com:443.
+HTTP request sent, awaiting response... 200 OK
+Length: 9703 (9,5K) [image/jpeg]
+Saving to: ‘/home/juned/soal-shift-sisop-modul-1-F05-2021/soal3/Koleksi_02’
+
+     0K .........                                             100% 29,8K=0,3s
+
+2021-03-30 18:29:13 (29,8 KB/s) - ‘/home/juned/soal-shift-sisop-modul-1-F05-2021/soal3/Koleksi_02’ saved [9703/9703]
+
+--2021-03-30 18:29:13--  https://loremflickr.com/320/240/kitten
+Resolving loremflickr.com (loremflickr.com)... 104.21.47.37, 172.67.170.91, 2606:4700:3034::6815:2f25, ...
+Connecting to loremflickr.com (loremflickr.com)|104.21.47.37|:443... connected.
+HTTP request sent, awaiting response... 302 Found
+Location: /cache/resized/65535_50547864512_4dc48e7fc8_320_240_nofilter.jpg [following]
+--2021-03-30 18:29:22--  https://loremflickr.com/cache/resized/65535_50547864512_4dc48e7fc8_320_240_nofilter.jpg
+Reusing existing connection to loremflickr.com:443.
+HTTP request sent, awaiting response... 200 OK
+Length: 14676 (14K) [image/jpeg]
+Saving to: ‘/home/juned/soal-shift-sisop-modul-1-F05-2021/soal3/Koleksi_03’
+
+     0K .......... ....                                       100%  130K=0,1s
+
+2021-03-30 18:29:22 (130 KB/s) - ‘/home/juned/soal-shift-sisop-modul-1-F05-2021/soal3/Koleksi_03’ saved [14676/14676]
+
+--2021-03-30 18:29:22--  https://loremflickr.com/320/240/kitten
+Resolving loremflickr.com (loremflickr.com)... 172.67.170.91, 104.21.47.37, 2606:4700:3037::ac43:aa5b, ...
+Connecting to loremflickr.com (loremflickr.com)|172.67.170.91|:443... connected.
+HTTP request sent, awaiting response... 302 Found
+Location: /cache/resized/65535_50514358782_50584fdd8b_320_240_nofilter.jpg [following]
+--2021-03-30 18:29:23--  https://loremflickr.com/cache/resized/65535_50514358782_50584fdd8b_320_240_nofilter.jpg
+Reusing existing connection to loremflickr.com:443.
+HTTP request sent, awaiting response... 200 OK
+Length: 11535 (11K) [image/jpeg]
+Saving to: ‘/home/juned/soal-shift-sisop-modul-1-F05-2021/soal3/Koleksi_04’
+
+     0K .......... .                                          100% 47,3K=0,2s
+
+2021-03-30 18:29:24 (47,3 KB/s) - ‘/home/juned/soal-shift-sisop-modul-1-F05-2021/soal3/Koleksi_04’ saved [11535/11535]
+
+--2021-03-30 18:29:24--  https://loremflickr.com/320/240/kitten
+Resolving loremflickr.com (loremflickr.com)... 104.21.47.37, 172.67.170.91, 2606:4700:3034::6815:2f25, ...
+Connecting to loremflickr.com (loremflickr.com)|104.21.47.37|:443... connected.
+HTTP request sent, awaiting response... 302 Found
+Location: /cache/resized/5782_23092314005_cb11c948eb_320_240_nofilter.jpg [following]
+--2021-03-30 18:29:26--  https://loremflickr.com/cache/resized/5782_23092314005_cb11c948eb_320_240_nofilter.jpg
+Reusing existing connection to loremflickr.com:443.
+HTTP request sent, awaiting response... 200 OK
+Length: 13672 (13K) [image/jpeg]
+Saving to: ‘/home/juned/soal-shift-sisop-modul-1-F05-2021/soal3/Koleksi_05’
+
+     0K .......... ...                                        100% 46,2K=0,3s
+
+2021-03-30 18:29:27 (46,2 KB/s) - ‘/home/juned/soal-shift-sisop-modul-1-F05-2021/soal3/Koleksi_05’ saved [13672/13672]
+
+--2021-03-30 18:29:27--  https://loremflickr.com/320/240/kitten
+Resolving loremflickr.com (loremflickr.com)... 172.67.170.91, 104.21.47.37, 2606:4700:3037::ac43:aa5b, ...
+Connecting to loremflickr.com (loremflickr.com)|172.67.170.91|:443... connected.
+HTTP request sent, awaiting response... 302 Found
+Location: /cache/resized/2137_5698463352_e00807c5aa_320_240_nofilter.jpg [following]
+--2021-03-30 18:29:29--  https://loremflickr.com/cache/resized/2137_5698463352_e00807c5aa_320_240_nofilter.jpg
+Reusing existing connection to loremflickr.com:443.
+HTTP request sent, awaiting response... 200 OK
+Length: 15398 (15K) [image/jpeg]
+Saving to: ‘/home/juned/soal-shift-sisop-modul-1-F05-2021/soal3/Koleksi_06’
+
+     0K .......... .....                                      100% 11,6K=1,3s
+
+2021-03-30 18:29:31 (11,6 KB/s) - ‘/home/juned/soal-shift-sisop-modul-1-F05-2021/soal3/Koleksi_06’ saved [15398/15398]
+
+--2021-03-30 18:29:31--  https://loremflickr.com/320/240/kitten
+Resolving loremflickr.com (loremflickr.com)... 104.21.47.37, 172.67.170.91, 2606:4700:3034::6815:2f25, ...
+Connecting to loremflickr.com (loremflickr.com)|104.21.47.37|:443... connected.
+HTTP request sent, awaiting response... 302 Found
+Location: /cache/resized/65535_50520994638_cae73fb9cf_320_240_nofilter.jpg [following]
+--2021-03-30 18:29:32--  https://loremflickr.com/cache/resized/65535_50520994638_cae73fb9cf_320_240_nofilter.jpg
+Reusing existing connection to loremflickr.com:443.
+HTTP request sent, awaiting response... 200 OK
+Length: 15686 (15K) [image/jpeg]
+Saving to: ‘/home/juned/soal-shift-sisop-modul-1-F05-2021/soal3/Koleksi_07’
+
+     0K .......... .....                                      100%  698K=0,02s
+
+2021-03-30 18:29:32 (698 KB/s) - ‘/home/juned/soal-shift-sisop-modul-1-F05-2021/soal3/Koleksi_07’ saved [15686/15686]
+
+--2021-03-30 18:29:32--  https://loremflickr.com/320/240/kitten
+Resolving loremflickr.com (loremflickr.com)... 172.67.170.91, 104.21.47.37, 2606:4700:3037::ac43:aa5b, ...
+Connecting to loremflickr.com (loremflickr.com)|172.67.170.91|:443... connected.
+HTTP request sent, awaiting response... 302 Found
+Location: /cache/resized/65535_50428991577_d206d220ef_320_240_nofilter.jpg [following]
+--2021-03-30 18:29:34--  https://loremflickr.com/cache/resized/65535_50428991577_d206d220ef_320_240_nofilter.jpg
+Reusing existing connection to loremflickr.com:443.
+HTTP request sent, awaiting response... 200 OK
+Length: 8511 (8,3K) [image/jpeg]
+Saving to: ‘/home/juned/soal-shift-sisop-modul-1-F05-2021/soal3/Koleksi_08’
+
+     0K ........                                              100% 10,2K=0,8s
+
+2021-03-30 18:29:35 (10,2 KB/s) - ‘/home/juned/soal-shift-sisop-modul-1-F05-2021/soal3/Koleksi_08’ saved [8511/8511]
+
+--2021-03-30 18:29:35--  https://loremflickr.com/320/240/kitten
+Resolving loremflickr.com (loremflickr.com)... 172.67.170.91, 104.21.47.37, 2606:4700:3037::ac43:aa5b, ...
+Connecting to loremflickr.com (loremflickr.com)|172.67.170.91|:443... connected.
+HTTP request sent, awaiting response... 302 Found
+Location: /cache/resized/65535_50756460131_3feb9da46a_320_240_nofilter.jpg [following]
+--2021-03-30 18:29:42--  https://loremflickr.com/cache/resized/65535_50756460131_3feb9da46a_320_240_nofilter.jpg
+Reusing existing connection to loremflickr.com:443.
+HTTP request sent, awaiting response... 200 OK
+Length: 18540 (18K) [image/jpeg]
+Saving to: ‘/home/juned/soal-shift-sisop-modul-1-F05-2021/soal3/Koleksi_09’
+
+     0K .......... ........                                   100%  313K=0,06s
+
+2021-03-30 18:29:42 (313 KB/s) - ‘/home/juned/soal-shift-sisop-modul-1-F05-2021/soal3/Koleksi_09’ saved [18540/18540]
+
+--2021-03-30 18:29:42--  https://loremflickr.com/320/240/kitten
+Resolving loremflickr.com (loremflickr.com)... 104.21.47.37, 172.67.170.91, 2606:4700:3034::6815:2f25, ...
+Connecting to loremflickr.com (loremflickr.com)|104.21.47.37|:443... connected.
+HTTP request sent, awaiting response... 302 Found
+Location: /cache/resized/65535_51037509582_7b097cb089_320_240_nofilter.jpg [following]
+--2021-03-30 18:29:43--  https://loremflickr.com/cache/resized/65535_51037509582_7b097cb089_320_240_nofilter.jpg
+Reusing existing connection to loremflickr.com:443.
+HTTP request sent, awaiting response... 200 OK
+Length: 12216 (12K) [image/jpeg]
+Saving to: ‘/home/juned/soal-shift-sisop-modul-1-F05-2021/soal3/Koleksi_10’
+
+     0K .......... .                                          100% 10,4K=1,1s
+
+2021-03-30 18:29:45 (10,4 KB/s) - ‘/home/juned/soal-shift-sisop-modul-1-F05-2021/soal3/Koleksi_10’ saved [12216/12216]
+
+--2021-03-30 18:29:45--  https://loremflickr.com/320/240/kitten
+Resolving loremflickr.com (loremflickr.com)... 172.67.170.91, 104.21.47.37, 2606:4700:3037::ac43:aa5b, ...
+Connecting to loremflickr.com (loremflickr.com)|172.67.170.91|:443... connected.
+HTTP request sent, awaiting response... 302 Found
+Location: /cache/resized/65535_50338047032_b575c6aacf_320_240_nofilter.jpg [following]
+--2021-03-30 18:29:46--  https://loremflickr.com/cache/resized/65535_50338047032_b575c6aacf_320_240_nofilter.jpg
+Reusing existing connection to loremflickr.com:443.
+HTTP request sent, awaiting response... 200 OK
+Length: 9637 (9,4K) [image/jpeg]
+Saving to: ‘/home/juned/soal-shift-sisop-modul-1-F05-2021/soal3/Koleksi_11’
+
+     0K .........                                             100%  565K=0,02s
+
+2021-03-30 18:29:46 (565 KB/s) - ‘/home/juned/soal-shift-sisop-modul-1-F05-2021/soal3/Koleksi_11’ saved [9637/9637]
+
+--2021-03-30 18:29:46--  https://loremflickr.com/320/240/kitten
+Resolving loremflickr.com (loremflickr.com)... 104.21.47.37, 172.67.170.91, 2606:4700:3034::6815:2f25, ...
+Connecting to loremflickr.com (loremflickr.com)|104.21.47.37|:443... connected.
+HTTP request sent, awaiting response... 302 Found
+Location: /cache/resized/65535_50428991577_d206d220ef_320_240_nofilter.jpg [following]
+--2021-03-30 18:29:47--  https://loremflickr.com/cache/resized/65535_50428991577_d206d220ef_320_240_nofilter.jpg
+Reusing existing connection to loremflickr.com:443.
+HTTP request sent, awaiting response... 200 OK
+Length: 8511 (8,3K) [image/jpeg]
+Saving to: ‘/home/juned/soal-shift-sisop-modul-1-F05-2021/soal3/Koleksi_12’
+
+     0K ........                                              100%  424K=0,02s
+
+2021-03-30 18:29:48 (424 KB/s) - ‘/home/juned/soal-shift-sisop-modul-1-F05-2021/soal3/Koleksi_12’ saved [8511/8511]
+
+--2021-03-30 18:29:48--  https://loremflickr.com/320/240/kitten
+Resolving loremflickr.com (loremflickr.com)... 172.67.170.91, 104.21.47.37, 2606:4700:3037::ac43:aa5b, ...
+Connecting to loremflickr.com (loremflickr.com)|172.67.170.91|:443... connected.
+HTTP request sent, awaiting response... 302 Found
+Location: /cache/resized/65535_50956077308_6327c6c947_320_240_nofilter.jpg [following]
+--2021-03-30 18:29:49--  https://loremflickr.com/cache/resized/65535_50956077308_6327c6c947_320_240_nofilter.jpg
+Reusing existing connection to loremflickr.com:443.
+HTTP request sent, awaiting response... 200 OK
+Length: 24589 (24K) [image/jpeg]
+Saving to: ‘/home/juned/soal-shift-sisop-modul-1-F05-2021/soal3/Koleksi_13’
+
+     0K .......... .......... ....                            100% 77,6K=0,3s
+
+2021-03-30 18:29:49 (77,6 KB/s) - ‘/home/juned/soal-shift-sisop-modul-1-F05-2021/soal3/Koleksi_13’ saved [24589/24589]
+
+--2021-03-30 18:29:49--  https://loremflickr.com/320/240/kitten
+Resolving loremflickr.com (loremflickr.com)... 104.21.47.37, 172.67.170.91, 2606:4700:3034::6815:2f25, ...
+Connecting to loremflickr.com (loremflickr.com)|104.21.47.37|:443... connected.
+HTTP request sent, awaiting response... 302 Found
+Location: /cache/resized/65535_50961184211_a229892e48_n_320_240_nofilter.jpg [following]
+--2021-03-30 18:29:51--  https://loremflickr.com/cache/resized/65535_50961184211_a229892e48_n_320_240_nofilter.jpg
+Reusing existing connection to loremflickr.com:443.
+HTTP request sent, awaiting response... 200 OK
+Length: 13396 (13K) [image/jpeg]
+Saving to: ‘/home/juned/soal-shift-sisop-modul-1-F05-2021/soal3/Koleksi_14’
+
+     0K .......... ...                                        100%  617K=0,02s
+
+2021-03-30 18:29:51 (617 KB/s) - ‘/home/juned/soal-shift-sisop-modul-1-F05-2021/soal3/Koleksi_14’ saved [13396/13396]
+
+--2021-03-30 18:29:51--  https://loremflickr.com/320/240/kitten
+Resolving loremflickr.com (loremflickr.com)... 172.67.170.91, 104.21.47.37, 2606:4700:3037::ac43:aa5b, ...
+Connecting to loremflickr.com (loremflickr.com)|172.67.170.91|:443... connected.
+HTTP request sent, awaiting response... 302 Found
+Location: /cache/resized/65535_50259199837_86b9e1049e_320_240_nofilter.jpg [following]
+--2021-03-30 18:29:52--  https://loremflickr.com/cache/resized/65535_50259199837_86b9e1049e_320_240_nofilter.jpg
+Reusing existing connection to loremflickr.com:443.
+HTTP request sent, awaiting response... 200 OK
+Length: 7836 (7,7K) [image/jpeg]
+Saving to: ‘/home/juned/soal-shift-sisop-modul-1-F05-2021/soal3/Koleksi_15’
+
+     0K .......                                               100%  741K=0,01s
+
+2021-03-30 18:29:52 (741 KB/s) - ‘/home/juned/soal-shift-sisop-modul-1-F05-2021/soal3/Koleksi_15’ saved [7836/7836]
+
+--2021-03-30 18:29:52--  https://loremflickr.com/320/240/kitten
+Resolving loremflickr.com (loremflickr.com)... 104.21.47.37, 172.67.170.91, 2606:4700:3034::6815:2f25, ...
+Connecting to loremflickr.com (loremflickr.com)|104.21.47.37|:443... connected.
+HTTP request sent, awaiting response... 302 Found
+Location: /cache/resized/65535_50988754171_d0f1be67da_320_240_nofilter.jpg [following]
+--2021-03-30 18:29:55--  https://loremflickr.com/cache/resized/65535_50988754171_d0f1be67da_320_240_nofilter.jpg
+Reusing existing connection to loremflickr.com:443.
+HTTP request sent, awaiting response... 200 OK
+Length: 7884 (7,7K) [image/jpeg]
+Saving to: ‘/home/juned/soal-shift-sisop-modul-1-F05-2021/soal3/Koleksi_16’
+
+     0K .......                                               100%  248K=0,03s
+
+2021-03-30 18:29:55 (248 KB/s) - ‘/home/juned/soal-shift-sisop-modul-1-F05-2021/soal3/Koleksi_16’ saved [7884/7884]
+
+--2021-03-30 18:29:55--  https://loremflickr.com/320/240/kitten
+Resolving loremflickr.com (loremflickr.com)... 172.67.170.91, 104.21.47.37, 2606:4700:3037::ac43:aa5b, ...
+Connecting to loremflickr.com (loremflickr.com)|172.67.170.91|:443... connected.
+HTTP request sent, awaiting response... 302 Found
+Location: /cache/resized/65535_50739141646_a2e146d245_320_240_nofilter.jpg [following]
+--2021-03-30 18:29:56--  https://loremflickr.com/cache/resized/65535_50739141646_a2e146d245_320_240_nofilter.jpg
+Reusing existing connection to loremflickr.com:443.
+HTTP request sent, awaiting response... 200 OK
+Length: 18583 (18K) [image/jpeg]
+Saving to: ‘/home/juned/soal-shift-sisop-modul-1-F05-2021/soal3/Koleksi_17’
+
+     0K .......... ........                                   100% 37,3K=0,5s
+
+2021-03-30 18:29:57 (37,3 KB/s) - ‘/home/juned/soal-shift-sisop-modul-1-F05-2021/soal3/Koleksi_17’ saved [18583/18583]
+
+--2021-03-30 18:29:57--  https://loremflickr.com/320/240/kitten
+Resolving loremflickr.com (loremflickr.com)... 172.67.170.91, 104.21.47.37, 2606:4700:3037::ac43:aa5b, ...
+Connecting to loremflickr.com (loremflickr.com)|172.67.170.91|:443... connected.
+HTTP request sent, awaiting response... 302 Found
+Location: /cache/resized/65535_50735100323_e42ce59a8f_320_240_nofilter.jpg [following]
+--2021-03-30 18:30:03--  https://loremflickr.com/cache/resized/65535_50735100323_e42ce59a8f_320_240_nofilter.jpg
+Reusing existing connection to loremflickr.com:443.
+HTTP request sent, awaiting response... 200 OK
+Length: 14296 (14K) [image/jpeg]
+Saving to: ‘/home/juned/soal-shift-sisop-modul-1-F05-2021/soal3/Koleksi_18’
+
+     0K .......... ...                                        100% 1021K=0,01s
+
+2021-03-30 18:30:04 (1021 KB/s) - ‘/home/juned/soal-shift-sisop-modul-1-F05-2021/soal3/Koleksi_18’ saved [14296/14296]
+
+--2021-03-30 18:30:04--  https://loremflickr.com/320/240/kitten
+Resolving loremflickr.com (loremflickr.com)... 104.21.47.37, 172.67.170.91, 2606:4700:3034::6815:2f25, ...
+Connecting to loremflickr.com (loremflickr.com)|104.21.47.37|:443... connected.
+HTTP request sent, awaiting response... 302 Found
+Location: /cache/resized/65535_50424112413_0ecffe4311_320_240_nofilter.jpg [following]
+--2021-03-30 18:30:05--  https://loremflickr.com/cache/resized/65535_50424112413_0ecffe4311_320_240_nofilter.jpg
+Reusing existing connection to loremflickr.com:443.
+HTTP request sent, awaiting response... 200 OK
+Length: 10773 (11K) [image/jpeg]
+Saving to: ‘/home/juned/soal-shift-sisop-modul-1-F05-2021/soal3/Koleksi_19’
+
+     0K ..........                                            100%  691K=0,02s
+
+2021-03-30 18:30:06 (691 KB/s) - ‘/home/juned/soal-shift-sisop-modul-1-F05-2021/soal3/Koleksi_19’ saved [10773/10773]
+
+--2021-03-30 18:30:06--  https://loremflickr.com/320/240/kitten
+Resolving loremflickr.com (loremflickr.com)... 172.67.170.91, 104.21.47.37, 2606:4700:3037::ac43:aa5b, ...
+Connecting to loremflickr.com (loremflickr.com)|172.67.170.91|:443... connected.
+HTTP request sent, awaiting response... 302 Found
+Location: /cache/resized/65535_50499358281_3d337871bb_320_240_nofilter.jpg [following]
+--2021-03-30 18:30:07--  https://loremflickr.com/cache/resized/65535_50499358281_3d337871bb_320_240_nofilter.jpg
+Reusing existing connection to loremflickr.com:443.
+HTTP request sent, awaiting response... 200 OK
+Length: 8792 (8,6K) [image/jpeg]
+Saving to: ‘/home/juned/soal-shift-sisop-modul-1-F05-2021/soal3/Koleksi_20’
+
+     0K ........                                              100% 31,0K=0,3s
+
+2021-03-30 18:30:07 (31,0 KB/s) - ‘/home/juned/soal-shift-sisop-modul-1-F05-2021/soal3/Koleksi_20’ saved [8792/8792]
+
+--2021-03-30 18:30:07--  https://loremflickr.com/320/240/kitten
+Resolving loremflickr.com (loremflickr.com)... 104.21.47.37, 172.67.170.91, 2606:4700:3034::6815:2f25, ...
+Connecting to loremflickr.com (loremflickr.com)|104.21.47.37|:443... connected.
+HTTP request sent, awaiting response... 302 Found
+Location: /cache/resized/5077_5901083565_1de48b7ece_320_240_nofilter.jpg [following]
+--2021-03-30 18:30:09--  https://loremflickr.com/cache/resized/5077_5901083565_1de48b7ece_320_240_nofilter.jpg
+Reusing existing connection to loremflickr.com:443.
+HTTP request sent, awaiting response... 200 OK
+Length: 10646 (10K) [image/jpeg]
+Saving to: ‘/home/juned/soal-shift-sisop-modul-1-F05-2021/soal3/Koleksi_21’
+
+     0K ..........                                            100% 4,54M=0,002s
+
+2021-03-30 18:30:09 (4,54 MB/s) - ‘/home/juned/soal-shift-sisop-modul-1-F05-2021/soal3/Koleksi_21’ saved [10646/10646]
+
+--2021-03-30 18:30:09--  https://loremflickr.com/320/240/kitten
+Resolving loremflickr.com (loremflickr.com)... 172.67.170.91, 104.21.47.37, 2606:4700:3037::ac43:aa5b, ...
+Connecting to loremflickr.com (loremflickr.com)|172.67.170.91|:443... connected.
+HTTP request sent, awaiting response... 302 Found
+Location: /cache/resized/65535_50970461128_aafe7e2b7d_320_240_nofilter.jpg [following]
+--2021-03-30 18:30:10--  https://loremflickr.com/cache/resized/65535_50970461128_aafe7e2b7d_320_240_nofilter.jpg
+Reusing existing connection to loremflickr.com:443.
+HTTP request sent, awaiting response... 200 OK
+Length: 12269 (12K) [image/jpeg]
+Saving to: ‘/home/juned/soal-shift-sisop-modul-1-F05-2021/soal3/Koleksi_22’
+
+     0K .......... .                                          100%  529K=0,02s
+
+2021-03-30 18:30:10 (529 KB/s) - ‘/home/juned/soal-shift-sisop-modul-1-F05-2021/soal3/Koleksi_22’ saved [12269/12269]
+
+--2021-03-30 18:30:10--  https://loremflickr.com/320/240/kitten
+Resolving loremflickr.com (loremflickr.com)... 104.21.47.37, 172.67.170.91, 2606:4700:3034::6815:2f25, ...
+Connecting to loremflickr.com (loremflickr.com)|104.21.47.37|:443... connected.
+HTTP request sent, awaiting response... 302 Found
+Location: /cache/resized/65535_50559238333_4318e6692b_320_240_nofilter.jpg [following]
+--2021-03-30 18:30:12--  https://loremflickr.com/cache/resized/65535_50559238333_4318e6692b_320_240_nofilter.jpg
+Reusing existing connection to loremflickr.com:443.
+HTTP request sent, awaiting response... 200 OK
+Length: 12228 (12K) [image/jpeg]
+Saving to: ‘/home/juned/soal-shift-sisop-modul-1-F05-2021/soal3/Koleksi_23’
+
+     0K .......... .                                          100%  429K=0,03s
+
+2021-03-30 18:30:12 (429 KB/s) - ‘/home/juned/soal-shift-sisop-modul-1-F05-2021/soal3/Koleksi_23’ saved [12228/12228]
+
+--2021-03-30 18:30:12--  https://loremflickr.com/320/240/kitten
+Resolving loremflickr.com (loremflickr.com)... 172.67.170.91, 104.21.47.37, 2606:4700:3037::ac43:aa5b, ...
+Connecting to loremflickr.com (loremflickr.com)|172.67.170.91|:443... connected.
+HTTP request sent, awaiting response... 302 Found
+Location: /cache/resized/65535_50576704203_126f9fe302_320_240_nofilter.jpg [following]
+--2021-03-30 18:30:13--  https://loremflickr.com/cache/resized/65535_50576704203_126f9fe302_320_240_nofilter.jpg
+Reusing existing connection to loremflickr.com:443.
+HTTP request sent, awaiting response... 200 OK
+Length: 10004 (9,8K) [image/jpeg]
+Saving to: ‘/home/juned/soal-shift-sisop-modul-1-F05-2021/soal3/Koleksi_24’
+
+     0K .........                                             100%  405K=0,02s
+
+2021-03-30 18:30:13 (405 KB/s) - ‘/home/juned/soal-shift-sisop-modul-1-F05-2021/soal3/Koleksi_24’ saved [10004/10004]
+

@@ -1,3 +1,11 @@
-0 7 * * 1-5 zip -P `date +"%m%d%Y"` -r Koleksi.zip ./Kucing* ./Kelinci*
-0 18 * * 1-5 unzip  -P `date +"%m%d%Y"` -r Koleksi.zip && rm Koleksi.zip
+
+now=date +%m%d%Y
+0 7 * * 1-5 zip Koleksiasik.zip -P $($now) -r ./Kucing* ./Kelinci* && rm -r ./Kucing_* ./Kelinci_*
+0 18 * * 1-5 unzip -P $($now) Koleksiasik.zip && rm -r Koleksiasik.zip
+
+#ini untuk mencoba di crontab
+#now=date +%m%d%Y
+#* * * * * zip Koleksiasik.zip -P $($now) -r ./Kucing* ./Kelinci* && rm -r ./Kucing_* ./Kelinci_*
+#* * * * * unzip -P $($now) Koleksiasik.zip && rm -r Koleksiasik.zip
+
 

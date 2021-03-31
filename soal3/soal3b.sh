@@ -2,9 +2,9 @@
 
 PWD=`pwd`
 
-bash soal3a.sh
+bash /home/juned/soal-shift-sisop-modul-1-F05-2021/soal3a.sh
 now=$(date +"%d-%m-%Y")
 mkdir "$now"
 
-mv ./Koleksi_* "./$now"
-mv ./Foto.log "./$now"
+mv /home/juned/soal-shift-sisop-modul-1-F05-2021/Koleksi_* "./$now"
+mv /home/juned/soal-shift-sisop-modul-1-F05-2021/Foto.log "./$now"

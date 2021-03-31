@@ -5,7 +5,7 @@ PWD=`pwd`
 now=$(date +"%d-%m-%Y")
 yes=$(date -d yesterday +"%d-%m-%Y")
 
-kuckem="/Kucing_$yes"
+kuckem="$PWD/Kucing_$yes"
 if [ -d "$kuckem" ] 
 then 
 mkdir "Kelinci_$now"
