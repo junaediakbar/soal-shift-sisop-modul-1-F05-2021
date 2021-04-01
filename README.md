@@ -131,7 +131,7 @@ Tujuannya adalah untuk menuliskan output yang didapatkan sesuai dengan format te
 source file data yang digunakan pada operasi awk, dan `> hasil.txt` digunakan untuk mengirimkan hasil output script kedalam file **hasil.txt**<br><br>
 
 Output yang ditampilkan apabila script sub-soal dijalankan pada shell adalah sebagai berikut :<br>
-<img src="images/soal2/2a.jpg">
+<img src="images/soal2/2a.PNG">
 
 ## Soal 2b
 Carilah nama customer pada transaksi tahun **2017** dan berdomisili di **Albuquerque**<br><br>
