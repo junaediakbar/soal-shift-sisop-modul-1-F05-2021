@@ -23,8 +23,11 @@ Output yang ditampilkan apabila script sub-soal dijalankan pada shell adalah seb
 ## Soal 1B
 Bisa menampilkan semua pesan error yang muncul yang muncul beserta jumlah kemunculannya.<br><br>
 
-Untuk menjawab sub-soal, dimasukkan perintah :<br>
+Untuk menjawab sub-soal, dimasukkan perintah :
+```
 err=`grep "ERROR" "syslog.log" | cut -d' ' -f7- | cut -d'(' -f1 | sort | uniq -c`<br>
+```
+
 Pada baris diatas, pertama - tama dijalankan perintah `grep "ERROR" "syslog.log"`. Perintah ini berfungsi untuk mengambil data dari suatu baris yang memiliki
 string "Error" didalamnya dari file syslog.log.<br>
 Setelah itu, dilakukan **pipe (|)** dari output perintah pertama menuju ke perintah `cut -d' ' -f7-`.<br><br>
@@ -45,8 +48,11 @@ menuju perintah uniq -c untuk menghitung jumlah kemunculan unique string yang te
 ## Soal 1C
 Bisa menampilkan jumlah kemunculan log ERROR dan INFO untuk setiap user-nya.<br><br>
 
-Untuk menjawab sub-soal, dimasukkan perintah :<br>
+Untuk menjawab sub-soal, dimasukkan perintah :
+```
 counterr=`grep "ERROR" "syslog.log"| cut -d'(' -f2 | cut -d')' -f1 | sort | uniq -c`
+```
+
 Pada baris diatas, pertama - tama dijalankan perintah `grep "ERROR" "syslog.log"`. Perintah ini berfungsi untuk mengambil data suatu baris yang memiliki
 string "Error" didalamnya dari file syslog.log.<br>
 Setelah itu, dilakukan **pipe (|)** dari output perintah pertama menuju perintah `cut -d'(' -f2`.<br><br>
@@ -63,8 +69,10 @@ Setelah itu, dilakukan **pipe (|)** sekali lagi dari output perintah ketiga menu
 Pada perintah `sort | uniq -c`, hasil string perintah ketiga kemudian akan di sorting sesuai dengan namanya dan dilakukan pipe-ing terakhir
 menuju perintah uniq -c untuk menghitung jumlah kemunculan unique string yang telah diurutkan tersebut.<br><br>
 
-Untuk menampilkan jumlah kemunculan log INFO, kita bisa menggunakan perintah serupa dengan perintah untuk menampilkan jumlah log ERROR :<br>
+Untuk menampilkan jumlah kemunculan log INFO, kita bisa menggunakan perintah serupa dengan perintah untuk menampilkan jumlah log ERROR :
+```
 countin=`grep "INFO" "syslog.log"| cut -d'(' -f2 | cut -d')' -f1 | sort | uniq -c`
+```
 
 ## Soal 1D
 Belum bisa tranfer data ke csv. 
