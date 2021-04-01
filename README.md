@@ -45,6 +45,9 @@ Setelah itu, dilakukan **pipe (|)** sekali lagi dari output perintah ketiga menu
 Pada perintah `sort | uniq -c`, hasil string perintah ketiga kemudian akan di sorting sesuai dengan namanya dan dilakukan pipe-ing terakhir
 menuju perintah uniq -c untuk menghitung jumlah kemunculan unique string yang telah diurutkan tersebut.
 
+Output yang ditampilkan apabila script sub-soal dijalankan pada shell adalah sebagai berikut :<br>
+<img src="images/soal1/1b.PNG">
+
 ## Soal 1C
 Bisa menampilkan jumlah kemunculan log ERROR dan INFO untuk setiap user-nya.<br><br>
 
