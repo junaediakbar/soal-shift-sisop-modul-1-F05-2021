@@ -167,6 +167,9 @@ yang diminta. Sedangkan untuk `Laporan-TokoShiSop.tsv >> hasil.txt`, *Laporan-To
 source file data yang digunakan pada operasi awk, dan `>> hasil.txt` digunakan untuk mengirimkan hasil output script kedalam 
 file **hasil.txt** tanpa menghapus konten yang sudah ada sebelumnya di **hasil.txt**.<br><br>
 
+Output yang ditampilkan apabila script sub-soal dijalankan pada shell adalah sebagai berikut :<br>
+<img src="images/soal2/2b.PNG">
+
 ## Soal 2C
 Carilah data **segment customer** yang memiliki **jumlah transaksi yang paling sedikit**.<br><br>
 Pada bagian *action* awk, terdapat command :
@@ -208,7 +211,10 @@ menggunakan data ke-i.<br><br>
 Setelah selesai dilakukan pengecekkan seluruh elemen yang ada pada array, tuliskan output yang didapatkan sesuai dengan format
 yang diminta. Sedangkan untuk `Laporan-TokoShiSop.tsv >> hasil.txt`, *Laporan-TokoShiSop.tsv* adalah
 source file data yang digunakan pada operasi awk, dan `>> hasil.txt` digunakan untuk mengirimkan hasil output script kedalam 
-file **hasil.txt** tanpa menghapus konten yang sudah ada sebelumnya di **hasil.txt**.<br><br> 
+file **hasil.txt** tanpa menghapus konten yang sudah ada sebelumnya di **hasil.txt**.<br><br>
+
+Output yang ditampilkan apabila script sub-soal dijalankan pada shell adalah sebagai berikut :<br>
+<img src="images/soal2/2c.PNG">
 
 ## Soal 2d
 Carilah **region yang memiliki total profit yang paling sedikit** beserta dengan **total profitnya**.<br><br>
@@ -252,7 +258,10 @@ menggunakan data ke-i.<br><br>
 Setelah selesai dilakukan pengecekkan seluruh elemen yang ada pada array, tuliskan output yang didapatkan sesuai dengan format
 yang diminta. Sedangkan untuk `Laporan-TokoShiSop.tsv >> hasil.txt`, *Laporan-TokoShiSop.tsv* adalah
 source file data yang digunakan pada operasi awk, dan `>> hasil.txt` digunakan untuk mengirimkan hasil output script kedalam 
-file **hasil.txt** tanpa menghapus konten yang sudah ada sebelumnya di **hasil.txt**.<br><br> 
+file **hasil.txt** tanpa menghapus konten yang sudah ada sebelumnya di **hasil.txt**.<br><br>
+
+Output yang ditampilkan apabila script sub-soal dijalankan pada shell adalah sebagai berikut :<br>
+<img src="images/soal2/2d.PNG">
 
 ## Soal 2e
 Membuat file dengan judul "**hasil.txt**" yang berisi kumpulan hasil jawaban dari script sebelumnya.<br><br>
