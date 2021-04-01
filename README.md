@@ -17,6 +17,9 @@ Perintah `cut -f6- -d' '` digunakan untuk memotong output yang sudah didapatkan 
 Kemudian, dari hasil potongan tersebut, diambil ***field ke 6 hingga terakhir*** untuk mendapatkan nilai **jenis log**, **pesan log**, dan **username**
 dari setiap baris tersebut.<br><br> 
 
+Output yang ditampilkan apabila script sub-soal dijalankan pada shell adalah sebagai berikut :<br>
+<img src="images/soal1/1a.PNG">
+
 ## Soal 1B
 Bisa menampilkan semua pesan error yang muncul yang muncul beserta jumlah kemunculannya.<br><br>
 
