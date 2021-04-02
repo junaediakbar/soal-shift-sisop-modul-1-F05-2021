@@ -34,7 +34,7 @@ Setelah itu, dilakukan **pipe (|)** dari output perintah pertama menuju ke perin
 
 Pada perintah `cut -d' ' -f7-`, hasil string yang didapatkan pada perintah pertama akan dipotong dengan mengacu pada 
 karakter spasi (" "). Kemudian dari hasil potongan tersebut, diambil ***field ke 7 hingga terakhir*** sehingga 
-diperoleh data **tipe error** dan **username** baris.<br>
+diperoleh data **tipe error** dan **username** dari setiap baris tersebut.<br>
 Setelah itu, dilakukan **pipe (|)** dari output perintah kedua ini menuju ke perintah `cut -d'(' -f1`.<br><br>
 
 Pada perintah `cut -d'(' -f1`, hasil string dari perintah kedua akan dipotong kembali dengan mengacu pada karakter
@@ -62,7 +62,7 @@ Setelah itu, dilakukan **pipe (|)** dari output perintah pertama menuju perintah
 
 Pada perintah `cut -d'(' -f2`, hasil string yang didapatkan pada perintah pertama akan dipotong dengan mengacu pada 
 karakter ("("). Kemudian dari hasil potongan tersebut, diambil ***field ke 2 hingga pertama*** sehingga 
-diperoleh data **username** baris. Namun masih ada karakter (")"), setelah itu dilakukan **pipe (|)** dari output perintah kedua ini menuju ke perintah `cut -d')' -f1`.<br><br>
+diperoleh data **username** pada baris tersebut. Namun masih ada karakter (")"), setelah itu dilakukan **pipe (|)** dari output perintah kedua ini menuju ke perintah `cut -d')' -f1`.<br><br>
 
 Pada perintah `cut -d')' -f1`, hasil string dari perintah kedua akan dipotong kembali dengan mengacu pada karakter
 tutup kurung (")"). Kemudian dari hasil pemotongan tersebut, diambil ***field pertama*** hasil pemotongan sehingga
