@@ -79,7 +79,6 @@ countin=`grep "INFO" "syslog.log"| cut -d'(' -f2 | cut -d')' -f1 | sort | uniq -
 
 Berikut merupakan tampilan Output apabila script sub-soal dijalankan pada shell, sebagai berikut :<br>
 <img src="images/soal1/1c(ERROR).PNG">
-<img src="images/soal1/1c(INFO).PNG">
 
 ## Soal 1D
 Belum bisa tranfer data ke csv. 
