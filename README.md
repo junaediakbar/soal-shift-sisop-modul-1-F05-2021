@@ -17,7 +17,7 @@ Perintah `cut -f6- -d' '` digunakan untuk memotong output yang sudah didapatkan 
 Kemudian, dari hasil potongan tersebut, diambil ***field ke 6 hingga terakhir*** untuk mendapatkan nilai **jenis log**, **pesan log**, dan **username**
 dari setiap baris tersebut.<br><br> 
 
-Output yang ditampilkan apabila script sub-soal dijalankan pada shell adalah sebagai berikut :<br>
+Berikut merupakan tampilan Output apabila script sub-soal dijalankan pada shell, sebagai berikut :<br>
 <img src="images/soal1/1a.PNG">
 
 ## Soal 1B
@@ -45,7 +45,7 @@ Setelah itu, dilakukan **pipe (|)** sekali lagi dari output perintah ketiga menu
 Pada perintah `sort | uniq -c`, hasil string perintah ketiga kemudian akan di sorting sesuai dengan namanya dan dilakukan pipe-ing terakhir
 menuju perintah uniq -c untuk menghitung jumlah kemunculan unique string yang telah diurutkan tersebut.
 
-Output yang ditampilkan apabila script sub-soal dijalankan pada shell adalah sebagai berikut :<br>
+Berikut merupakan tampilan Output apabila script sub-soal dijalankan pada shell, sebagai berikut :<br>
 <img src="images/soal1/1b.PNG">
 
 ## Soal 1C
