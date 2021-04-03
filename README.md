@@ -203,6 +203,10 @@ berikut adalah tampilannya dalam format csv
 ![](images/soal1/1e-csv.png)
 - lalu perintah `cat user_statistic.csv`untuk menampilkan `user_statistic.csv` dalam terminal
 ![](images/soal1/1e.png)
+## Kendala Selama Pengerjaan
+- Kesulitan dalam menjalankan perintah grep karena belum dipelajari saat jam kuliah
+- Kesulitan dalam mentransfer file ke csv 
+
 # Soal 2
 Soal ini menggunakan data yang berasal dari *laporan-TokoShiSop.tsv* yang telah disediakan.<br>
 Karena file berformat *tsv*, maka pada setiap sub-soal, AWK diinisiasi dengan menggunakan command :
@@ -611,3 +615,6 @@ Dan berikut adalah contoh hasil dari perintah untuk men-`zip` filenya
 
 Dan berikut adalah contoh hasil dari perintah untuk men-`unzip` filenya
 ![](images/soal3/3e-unzip.png)
+
+## Kendala Selama Pengerjaan
+- Perintah crontab terkadang tidak bekerja. Karena beberapa perintah CLI tidak langsung berjalan di crontab, sehingga perlu format penulisan yang sesuai untuk crontab
