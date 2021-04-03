@@ -587,13 +587,26 @@ now=$(date +"%m%d%Y")
 echo $now
 zip -P $now Koleksi.zip -r ./Kucing* ./Kelinci*
 ```
+Berikut adalah hasilnya saat dijalankan
+![](images/soal3/soal3d.png)
 ## soal 3e
 Untuk soal ini kita diminta menjadwalkan yaitu setiap hari kecuali sabtu dan minggu, dari jam 7 pagi sampai 6 sore, ia memintamu untuk membuat koleksinya ter-zip saat kuliah saja, selain dari waktu yang disebutkan,semua folder ter-unzip dan tidak ada file zip sama sekali.
 ```
-0 7 * * 1-5 zip -P `date +"%m%d%Y"` -r Koleksi.zip ./Kucing* ./Kelinci*
-0 18 * * 1-5 unzip  -P `date +"%m%d%Y"` -r Koleksi.zip && rm Koleksi.zip
+now=date +%m%d%Y
+0 7 * * 1-5 zip Koleksi.zip -P $($now) -r ./Kucing* ./Kelinci* && rm -r ./Kucing_* ./Kelinci_*
+0 18 * * 1-5 unzip -P $($now) Koleksi.zip && rm -r Koleksi.zip
 ```
+- `now=date +%m%d%Y` untuk menyimpan tanggal ke variabel now
+- `zip Koleksi.zip -P $($now) -r ./Kucing* ./Kelinci*` untuk menzip file dengan password sesuai variabel `$now`
+- `rm -r ./Kucing_* ./Kelinci_*` untuk menghapus file yang terdapat nama 'Kucing' dan 'Kelinci'
+- `unzip -P $($now) Koleksi.zip`untuk menzip file dengan password sesuai variabel `$now`
+-  `rm -r Koleksi.zip` untuk menghapus file `Koleksi.zip`
 
+berikut adalah perintah tersebut saat dijalankan di crontab
+![](images/soal3/3e.png)
 
+Dan berikut adalah contoh hasil dari perintah untuk men-`zip` filenya
+![](images/soal3/3e-zip.png)
 
-
+Dan berikut adalah contoh hasil dari perintah untuk men-`unzip` filenya
+![](images/soal3/3e-unzip.png)
