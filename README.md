@@ -200,9 +200,9 @@ while read username; do
 done < name.csv
 ```
 berikut adalah tampilannya dalam format csv
-![img src="images/soal1/1e-csv.png"]
--lalu perintah `cat user_statistic.csv`untuk menampilkan `user_statistic.csv` dalam terminal
-![img src="images/soal1/1e.png"]
+![](images/soal1/1e-csv.png)
+- lalu perintah `cat user_statistic.csv`untuk menampilkan `user_statistic.csv` dalam terminal
+![](images/soal1/1e.png)
 # Soal 2
 Soal ini menggunakan data yang berasal dari *laporan-TokoShiSop.tsv* yang telah disediakan.<br>
 Karena file berformat *tsv*, maka pada setiap sub-soal, AWK diinisiasi dengan menggunakan command :
