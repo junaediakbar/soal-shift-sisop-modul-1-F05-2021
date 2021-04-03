@@ -448,12 +448,19 @@ fi
 done
 done
 ```
+berikut ini adalah hasilnya saat dijalankan 
+![](images/soal3/3a.png)
+
 ## soal 3b
 untuk membuat crontab untuk __setiap tanggal 1 tujuh hari sekali (1,8,...)__ serta dari tanggal __2 empat hari sekali (2,6,...)__ bisa dengan
 ```  
-20 1-31/7,2-31/4 * * bash ./home/juned/soal3b.sh
+0 20 1-31/7,2-31/4 * * bash /home/juned/soal3b.sh 
 ```
-sedangkan untuk memindahkan file kita bisa memindahkan file gambar yang telah diunduh beserta log-nya, dipindahkan ke folder dengan nama tanggal unduhnya dengan format "DD-MM-YYYY" bisa dengan script ```soal3b.sh``` berikut 
+- `0 20 1-31/7,2-31/4` ini untuk menjadwalkan sesuai jadwal yang diberikan
+- ` bash /home/juned/soal3b.sh ` menjalankan perintah bash pada file `soal3b.sh`
+berikut adalah hasilnya saat dijalankan di crontab
+![](images/soal3/3b.png)
+sedangkan untuk memindahkan file kita bisa memindahkan file gambar yang telah diunduh beserta log-nya, dipindahkan ke folder dengan nama tanggal unduhnya dengan format "DD-MM-YYYY" bisa dengan script `soal3b.sh` berikut 
 ```
 #!/bin/bash
 
@@ -466,7 +473,11 @@ mkdir "$now"
 mv ./Koleksi_* "./$now"
 mv ./Foto.log "./$now"
 ```
-
+- `bash soal3a.sh` untuk menjalankan soal3a.sh
+- `now=$(date +"%d-%m-%Y")` dan `mkdir "$now"` menyimpan tanggal ke variabel `$now` lalu membuat folder dengan nama tanggal saat dijalankan
+- `mv ./Koleksi_* "./$now"` dan ` mv ./Foto.log "./$now"` untuk memindahkan nama yang bernama Koleksi.. dan Foto.log ke folder yang baru dibuat
+berikut adalah soal3b.sh saat dijalankan 
+![](images/soal3/3b-file.png)
 ## soal 3c
 
 Untuk soal ini kita diminta untuk mendownload gambar kucing dan kelinci secara bergantian tiap hari kemudian di simpan dalam folder Kucing_%mm%dd%Y untuk gambar kucing dan Kelinci_%mm%dd%Y untuk gambar kelinci. maka diawal script perlu diperiksa nama folder yang telah didownload (pada hari sebelumnya), jika filenya adalah kucing maka akan di download gambar kelinci begitu juga sebaliknya. Karena diminta untuk mendownload gambar kelinci kita bisa membuat command yang mirip seperti __soal3a.sh__ hanya mengganti link setelah ```wget```.
@@ -1047,12 +1058,27 @@ now=$(date +"%m%d%Y")
 echo $now
 zip -P $now Koleksi.zip -r ./Kucing* ./Kelinci*
 ```
+Berikut adalah hasilnya saat dijalankan
+![](images/soal3/soal3d.png)
 ## soal 3e
 Untuk soal ini kita diminta menjadwalkan yaitu setiap hari kecuali sabtu dan minggu, dari jam 7 pagi sampai 6 sore, ia memintamu untuk membuat koleksinya ter-zip saat kuliah saja, selain dari waktu yang disebutkan,semua folder ter-unzip dan tidak ada file zip sama sekali.
 ```
-0 7 * * 1-5 zip -P `date +"%m%d%Y"` -r Koleksi.zip ./Kucing* ./Kelinci*
-0 18 * * 1-5 unzip  -P `date +"%m%d%Y"` -r Koleksi.zip && rm Koleksi.zip
+now=date +%m%d%Y
+0 7 * * 1-5 zip Koleksi.zip -P $($now) -r ./Kucing* ./Kelinci* && rm -r ./Kucing_* ./Kelinci_*
+0 18 * * 1-5 unzip -P $($now) Koleksi.zip && rm -r Koleksi.zip
 ```
+- `now=date +%m%d%Y` untuk menyimpan tanggal ke variabel now
+- `zip Koleksi.zip -P $($now) -r ./Kucing* ./Kelinci*` untuk menzip file dengan password sesuai variabel `$now`
+- `rm -r ./Kucing_* ./Kelinci_*` untuk menghapus file yang terdapat nama 'Kucing' dan 'Kelinci'
+- `unzip -P $($now) Koleksi.zip`untuk menzip file dengan password sesuai variabel `$now`
+-  `rm -r Koleksi.zip` untuk menghapus file `Koleksi.zip`
 
+berikut adalah perintah tersebut saat dijalankan di crontab
+![](images/soal3/3e.png)
 
+Dan berikut adalah contoh hasil dari perintah untuk men-`zip` filenya
+![](images/soal3/3e-zip.png)
+
+Dan berikut adalah contoh hasil dari perintah untuk men-`unzip` filenya
+![](images/soal3/3e-unzip.png)
 
