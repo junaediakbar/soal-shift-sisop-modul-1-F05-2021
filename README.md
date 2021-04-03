@@ -289,7 +289,7 @@ Yang pertama adalah operator `>` untuk mengoverwrite seluruh konten yang sebelum
 Sedangkan operator redirection yang kedua adalah `>>`, digunakan untuk menambahkan hasil output script yang didapatkan ke halaman akhir file tujuan tanpa melakukan overwriting. Operator ini
 digunakan pada soal 2b,2c,dan 2d.<br><br>
 
-### Kendala Selama Pengerjaan
+## Kendala Selama Pengerjaan
 - Sempat mengalami kendala untuk mengolah data tsv yang disediakan. Tapi setelah mencari solusinya, ternyata untuk data dengan format *.tsv* field separator-nya adalah */t*
 - Sempat kebingungan untuk memeriksa tahun transaksi untuk no 2b, tapi permasalahan dapat diatasi dengan perintah split.
 
