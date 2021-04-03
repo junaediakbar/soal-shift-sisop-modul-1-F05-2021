@@ -589,7 +589,6 @@ Untuk diminta men-zip semua folder kucing dan kelinci dan memberi password sesua
 PWD=`pwd`
 
 now=$(date +"%m%d%Y")
-echo $now
 zip -P $now Koleksi.zip -r ./Kucing* ./Kelinci*
 ```
 Berikut adalah hasilnya saat dijalankan
