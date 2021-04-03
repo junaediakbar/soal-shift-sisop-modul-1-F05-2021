@@ -1,7 +1,7 @@
 # soal-shift-sisop-modul-1-F05-2021
 
 # Soal 1
-## Soal 1A
+## Soal 1a
 Mengumpulkan informasi dari log aplikasi yang terdapat pada file syslog.log. 
 Informasi yang diperlukan antara lain: jenis log (ERROR/INFO), pesan log, dan username pada setiap baris lognya.<br><br>
 
@@ -20,7 +20,7 @@ dari setiap baris tersebut.<br><br>
 Berikut merupakan tampilan Output apabila script sub-soal dijalankan pada shell, sebagai berikut :<br>
 <img src="images/soal1/1a.PNG">
 
-## Soal 1B
+## Soal 1b
 Bisa menampilkan semua pesan error yang muncul yang muncul beserta jumlah kemunculannya.<br><br>
 
 Untuk menjawab sub-soal, dimasukkan perintah :
@@ -48,7 +48,7 @@ menuju perintah uniq -c untuk menghitung jumlah kemunculan unique string yang te
 Berikut merupakan tampilan Output apabila script sub-soal dijalankan pada shell, sebagai berikut :<br>
 <img src="images/soal1/1b.PNG">
 
-## Soal 1C
+## Soal 1c
 Bisa menampilkan jumlah kemunculan log ERROR dan INFO untuk setiap user-nya.<br><br>
 
 Untuk menjawab sub-soal, dimasukkan perintah :
@@ -81,7 +81,7 @@ Berikut merupakan tampilan Output apabila script sub-soal dijalankan pada shell,
 <img src="images/soal1/1cError.PNG">
 <img src="images/soal1/1cInfo.PNG">
 
-## Soal 1D
+## Soal 1d
 Semua informasi yang didapatkan pada poin B, dituliskan ke dalam file error_message.csv. Contoh format pada file csv-nya adalah : <br>
 ```
 Error,Count
@@ -125,7 +125,7 @@ Berikut merupakan tampilan Output apabila script sub-soal dijalankan pada shell,
 <img src="images/soal1/1dShell.PNG">
 <img src="images/soal1/1dCSV.PNG">
 
-## Soal 1E
+## Soal 1e
 Pada soal E ini diminta untuk menampilkan username beserta jumlah error dan infonya seperti :
 ```
 Username,INFO,ERROR
@@ -308,7 +308,7 @@ file **hasil.txt** tanpa menghapus konten yang sudah ada sebelumnya di **hasil.t
 Output yang ditampilkan apabila script sub-soal dijalankan pada shell adalah sebagai berikut :<br>
 <img src="images/soal2/2b.PNG">
 
-## Soal 2C
+## Soal 2c
 Carilah data **segment customer** yang memiliki **jumlah transaksi yang paling sedikit**.<br><br>
 Pada bagian *action* awk, terdapat command :
 ```
@@ -415,7 +415,7 @@ digunakan pada soal 2b,2c,dan 2d.<br><br>
 
 
 # Soal 3
-## soal 3a
+## Soal 3a
 Untuk mendowload file dari ```https://loremflickr.com/320/240/kitten``` kita dapat menggunakan perintah ```wget -a $PWD/Foto.log -O $PWD/"Koleksi_0$i"```serta akan menyimpan log ke dalam file __Foto.log__
 
 ```
@@ -455,7 +455,7 @@ done
 berikut ini adalah hasilnya saat dijalankan 
 ![](images/soal3/3a.png)
 
-## soal 3b
+## Soal 3b
 untuk membuat crontab untuk __setiap tanggal 1 tujuh hari sekali (1,8,...)__ serta dari tanggal __2 empat hari sekali (2,6,...)__ bisa dengan
 ```  
 0 20 1-31/7,2-31/4 * * bash /home/juned/soal3b.sh 
@@ -482,7 +482,7 @@ mv ./Foto.log "./$now"
 - `mv ./Koleksi_* "./$now"` dan ` mv ./Foto.log "./$now"` untuk memindahkan nama yang bernama Koleksi.. dan Foto.log ke folder yang baru dibuat
 berikut adalah soal3b.sh saat dijalankan 
 ![](images/soal3/3b-file.png)
-## soal 3c
+## Soal 3c
 
 Untuk soal ini kita diminta untuk mendownload gambar kucing dan kelinci secara bergantian tiap hari kemudian di simpan dalam folder Kucing_%mm%dd%Y untuk gambar kucing dan Kelinci_%mm%dd%Y untuk gambar kelinci. maka diawal script perlu diperiksa nama folder yang telah didownload (pada hari sebelumnya), jika filenya adalah kucing maka akan di download gambar kelinci begitu juga sebaliknya. Karena diminta untuk mendownload gambar kelinci kita bisa membuat command yang mirip seperti __soal3a.sh__ hanya mengganti link setelah ```wget```.
 ``` wget -a $PWD/Foto.log -O $PWD/"Koleksi_0$i" https://loremflickr.com/320/240/bunny```
@@ -502,7 +502,7 @@ PWD=`pwd`
 now=$(date +"%d-%m-%Y")
 yes=$(date -d yesterday +"%d-%m-%Y")
 
-kuckem="/Kucing_$yes"
+kuckem="$PWD/Kucing_$yes"
 if [ -d "$kuckem" ] 
 then 
 mkdir "Kelinci_$now"
@@ -581,7 +581,7 @@ fi
 ```
 berikut adalah perintahnya saat dijalankan
 ![](images/soal3/3c.png)
-## soal 3d
+## Soal 3d
 Untuk diminta men-zip semua folder kucing dan kelinci dan memberi password sesuai tanggal hari dimana dilakukan zipping
 ```
 #!/bin/bash
@@ -593,7 +593,7 @@ zip -P $now Koleksi.zip -r ./Kucing* ./Kelinci*
 ```
 Berikut adalah hasilnya saat dijalankan
 ![](images/soal3/3d.png)
-## soal 3e
+## Soal 3e
 Untuk soal ini kita diminta menjadwalkan yaitu setiap hari kecuali sabtu dan minggu, dari jam 7 pagi sampai 6 sore, ia memintamu untuk membuat koleksinya ter-zip saat kuliah saja, selain dari waktu yang disebutkan,semua folder ter-unzip dan tidak ada file zip sama sekali.
 ```
 now=date +%m%d%Y
