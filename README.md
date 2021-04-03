@@ -126,8 +126,83 @@ Berikut merupakan tampilan Output apabila script sub-soal dijalankan pada shell,
 <img src="images/soal1/1dCSV.PNG">
 
 ## Soal 1E
-Belum bisa tranfer data dari ke csv. 
+Pada soal E ini diminta untuk menampilkan username beserta jumlah error dan infonya seperti :
+```
+Username,INFO,ERROR
+kaori02,6,0
+kousei01,2,2
+ryujin.1203,1,3
+```
+berikut adalah command-nya:
+```
+printf 'Username,INFO,ERROR\n' > user_statistic.csv
+cat syslog.log | cut -d'(' -f2 | cut -d')' -f1 | sort | uniq -c | tr -d '[0-9]' | sed -e 's/^[[:space:]]*//' > name.csv
+echo "$counterr" | grep -Eo '[0-9]{1,}' > errorcount.csv
+echo "$counterr" | tr -d '[0-9]' | sed -e 's/^[[:space:]]*//' > errorname.csv
+echo "$countin"| grep -Eo '[0-9]{1,}' > infocount.csv
+echo "$countin" | tr -d '[0-9]' | sed -e 's/^[[:space:]]*//' > infoname.csv
 
+while read username; do
+    nameuser="$username"
+    infouser=0
+    erroruser=0
+    paste infocount.csv infoname.csv | (while read infocount infoname; do
+        if [ "$nameuser" == "$infoname" ]
+        then
+            infouser=$infocount
+            break
+        fi
+    done
+    paste errorcount.csv errorname.csv | (while read errorcount errorname; do
+        if [ "$nameuser" == "$errorname" ]
+        then
+            erroruser=$errorcount
+            break
+        fi
+    done
+    printf "$nameuser,$infouser,$erroruser\n" >> user_statistic.csv))
+done < name.csv
+cat user_statistic.csv
+rm name.csv
+rm errorcount.csv
+rm errorname.csv
+rm infocount.csv
+rm infoname.csv
+```
+Berikut adalah rincian perintahnya:
+-`printf 'Username,INFO,ERROR\n' > user_statistic.csv` untuk memasukkan header Username,INFO,ERROR ke dalam `user_statistic.csv`
+-`cat syslog.log | cut -d'(' -f2 | cut -d')' -f1 | sort | uniq -c | tr -d '[0-9]' | sed -e 's/^[[:space:]]*//' > name.csv` ini digunakan untuk memperoleh username dari setiap user dalam file `syslog.log`.
+-`echo "$counterr" | grep -Eo '[0-9]{1,}' > errorcount.csv` dari variabel `$counterr` yang berisi nama dan jumlah errornya diambil jumlah errornya lalu dimasukkan ke dalam `errorcount.csv` 
+-`echo "$counterr" | tr -d '[0-9]' | sed -e 's/^[[:space:]]*//' > errorname.csv` dari variabel `$conterr` yang berisi nama dan jumlah errornya diambil usernamenya lalu dimasukkan ke dalam `errorname.csv` 
+-`echo "$countin"| grep -Eo '[0-9]{1,}' > infocount.csv`  dari variabel `$cointin` yang berisi nama dan jumlah infonya diambil jumlah infonya lalu dimasukkan ke dalam `infocount.csv`
+-`echo "$countin" | tr -d '[0-9]' | sed -e 's/^[[:space:]]*//' > infoname.csv`  dari variabel `$contin` yang berisi nama dan jumlah errornya diambil usernamenya lalu dimasukkan ke dalam `infoname.csv` 
+-Kemudian dicari username dan jumlah errornya serta jumlah infonya lalu dimasukkan ke dalam `user_statistic.csv`
+```
+while read username; do
+    nameuser="$username"
+    infouser=0
+    erroruser=0
+    paste infocount.csv infoname.csv | (while read infocount infoname; do
+        if [ "$nameuser" == "$infoname" ]
+        then
+            infouser=$infocount
+            break
+        fi
+    done
+    paste errorcount.csv errorname.csv | (while read errorcount errorname; do
+        if [ "$nameuser" == "$errorname" ]
+        then
+            erroruser=$errorcount
+            break
+        fi
+    done
+    printf "$nameuser,$infouser,$erroruser\n" >> user_statistic.csv))
+done < name.csv
+```
+berikut adalah tampilannya dalam format csv
+![img src="images/soal1/1e-csv.png"]
+-lalu perintah `cat user_statistic.csv`untuk menampilkan `user_statistic.csv` dalam terminal
+![img src="images/soal1/1e.png"]
 # Soal 2
 Soal ini menggunakan data yang berasal dari *laporan-TokoShiSop.tsv* yang telah disediakan.<br>
 Karena file berformat *tsv*, maka pada setiap sub-soal, AWK diinisiasi dengan menggunakan command :
