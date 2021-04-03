@@ -82,7 +82,48 @@ Berikut merupakan tampilan Output apabila script sub-soal dijalankan pada shell,
 <img src="images/soal1/1cInfo.PNG">
 
 ## Soal 1D
-Belum bisa tranfer data ke csv. 
+Semua informasi yang didapatkan pada poin B, dituliskan ke dalam file error_message.csv. Contoh format pada file csv-nya adalah : <br>
+```
+Error,Count
+Permission denied,5
+File not found,3
+Failed to connect to DB,2
+
+``` 
+Untuk menjawab sub soal, dilakukan perintah : <br>
+```
+printf 'Error,Count\n' > error_message.csv
+echo "$err"| sort -nr | grep -Eo '[0-9]{1,}' > count.csv
+echo "$err"| sort -nr | tr -d '[0-9]' | sed -e 's/^[[:space:]]*//' | sed 's/.$//'> message.csv
+ 
+paste message.csv count.csv | while IFS="$(printf '\t')" read -r f1 f2
+do
+    printf "$f1,$f2\n"
+done >> error_message.csv
+
+cat "error_message.csv"
+rm message.csv
+rm count.csv
+```
+**Penjelasan command line :**<br>
+- `printf 'Error,Count\n' > error_message.csv` digunakan untuk memasukkan header ke dalam file output akhir yang diminta.
+- `echo "$err"` digunakan untuk menampilkan hasil output sub-soal 1b yang sebelumnya telah dibuat.
+- `sort -nr | grep -Eo '[0-9]{1,}' > count.csv` berfungsi untuk mengurutkan hasil output dari soal 1b berdasarkan
+numerical order urutan terbalik (reverse), piping kembali, untuk mengambil segala jenis digit pada suatu baris dan kemudian
+dimasukkan kedalam file temporary ***count.csv***.
+- `sort -nr | tr -d '[0-9]' | sed -e 's/^[[:space:]]*//' | sed 's/.$//'> message.csv` berfungsi untuk mengurutkan hasil output 
+dari soal 1b berdasarkan numerical order urutan terbalik (reverse), lakukan piping untuk membuang segala jenis digit angka pada baris,
+kemudian piping kembali untuk menghapus karakter *'/t'* pada output, dan dilakukan piping terakhir untuk menghapus spasi yang berada
+pada akhir kalimat tiap baris. Kemudian hasilnya dimasukkan kedalam file temporary ***message.csv***.
+- `paste message.csv count.csv` digunakan untuk menampilkan data pada 2 file temporary sebelumnya secara berdampingan (dipisahkan dengan tab).
+- `while IFS="$(printf '\t')" read -r f1 f2` digunakan untuk membaca hasil perintah *paste* sebelumnya yang dipisahkan dengan tab. Untuk kemudian
+dilanjutkan dengan perintah printf yang dipisahkan dengan karakter ***koma***, sehingga data bisa dimasukkan ke dalam fil *eerror_message.csv*.
+- `cat` digunakan untuk menampilkan hasil file yang sudah dibentuk.
+- `rm` digunakan untuk menghapus file csv temporary yang telah digunakan sebelumnya. 
+
+Berikut merupakan tampilan Output apabila script sub-soal dijalankan pada shell, sebagai berikut :<br>
+<img src="images/soal1/1dShell.PNG">
+<img src="images/soal1/1dCSV.PNG">
 
 ## Soal 1E
 Belum bisa tranfer data dari ke csv. 
