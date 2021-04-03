@@ -205,7 +205,7 @@ berikut adalah tampilannya dalam format csv
 ![](images/soal1/1e.png)
 ## Kendala Selama Pengerjaan
 - Kesulitan dalam menjalankan perintah grep karena belum dipelajari saat jam kuliah
-- Kesulitan dalam mentransfer file ke csv 
+- Kesulitan dalam menggabungkan output dan mentransfer ke csv 
 
 # Soal 2
 Soal ini menggunakan data yang berasal dari *laporan-TokoShiSop.tsv* yang telah disediakan.<br>
