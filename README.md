@@ -575,7 +575,8 @@ mv ./Foto.log "./Kucing_$now"
 
 fi
 ```
-
+berikut adalah perintahnya saat dijalankan
+![](images/soal3/3c.png)
 ## soal 3d
 Untuk diminta men-zip semua folder kucing dan kelinci dan memberi password sesuai tanggal hari dimana dilakukan zipping
 ```
@@ -588,7 +589,7 @@ echo $now
 zip -P $now Koleksi.zip -r ./Kucing* ./Kelinci*
 ```
 Berikut adalah hasilnya saat dijalankan
-![](images/soal3/soal3d.png)
+![](images/soal3/3d.png)
 ## soal 3e
 Untuk soal ini kita diminta menjadwalkan yaitu setiap hari kecuali sabtu dan minggu, dari jam 7 pagi sampai 6 sore, ia memintamu untuk membuat koleksinya ter-zip saat kuliah saja, selain dari waktu yang disebutkan,semua folder ter-unzip dan tidak ada file zip sama sekali.
 ```
